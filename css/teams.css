@@ -1,0 +1,142 @@
+body{
+    background-color: #1c252e;
+    color: #fefeff;
+}
+
+header {
+    width: 100%;
+    background-color: #252f39;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fefeff;
+}
+
+.header__menu {
+    display: flex;
+    margin-right: 90px;
+}
+
+.menu-list {
+    display: flex;
+    color: #d3d6d8;
+    gap: 100px;
+    align-items: center;
+    list-style-type: none;
+}
+
+.menu-list-icon {
+    height: 30px;
+    width: 100px;
+    background: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu-list-icon-image {
+    width: 30px;
+    height: 30px;
+
+}
+
+.menu-list-icon-link {
+    display: flex;
+    align-items: center;
+}
+
+.icon-image {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.header__search {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.header__search-input {
+    height: 34px;
+    width: 200px;
+    border: none;
+    border-radius: 15px;
+
+}
+
+.header__search-btn {
+    height: 34px;
+    width: 30px;
+    background: none;
+    border: none;
+    padding: 2px 0;
+}
+
+.header__search-btn-image {
+    object-fit: contain;
+    width: 30px;
+    height: 30px;
+}
+
+.sidebar-menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 125px;
+    margin-right: 200px;
+    z-index: 1100;
+    padding: 0;
+}
+
+.sidebar-menu-btn:hover {
+    background-color: #4b535a;
+}
+
+.sidebar-menu-btn-image {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+.layout {
+    position: fixed;
+    top: 0;
+    left: -125px;
+    padding-top: 10px;
+    width: 125px;
+    height: 100%;
+    background: #252f39;
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.layout.open {
+    left: 0;
+
+}
+
+.layout-list {
+    padding-top: 40px;
+}
+
+.players-container{
+    text-align: center;
+}
+.table-teams{
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.table-header{
+    background-color: #252f39;
+}
+
+.table-body{
+    background-color: #2d3741;
+}
+
