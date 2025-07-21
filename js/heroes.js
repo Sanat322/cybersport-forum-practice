@@ -16,13 +16,15 @@ export const getHeroes = async () => {
 
             heroCard.innerHTML =
                 `
-            <div data-hero-icon>
-                <img src = "${customPath}" class = "hero-card-image" alt ="${hero.localized_name}" title ="${hero.localized_name}"">
-            </div>
+                <a href="heroPage.html?name=${encodeURIComponent(hero.localized_name)}">
+                    <div data-hero-icon>
+                        <img src = "${customPath}" class = "hero-card-image" alt ="${hero.localized_name}" title ="${hero.localized_name}"">
+                    </div>
+                </a>
             `;
-            heroCard.querySelector("[data-hero-icon]").addEventListener("click", () => {
-                showModalHero(hero);
-            });
+            // heroCard.querySelector("[data-hero-icon]").addEventListener("click", () => {
+            //     showModalHero(hero);
+            // });
 
             heroGroup.appendChild(heroCard)
         })
@@ -32,7 +34,7 @@ export const getHeroes = async () => {
     }
 }
 
-const showModalHero = (chosenHero) => {
+export const showModalHero = (chosenHero) => {
     const heroModalContainer = document.querySelector("[data-hero-modal-container]");
     const heroInfo = document.querySelector("[data-hero-info-container]");
 
@@ -52,14 +54,10 @@ const showModalHero = (chosenHero) => {
         </div>
     </div>
     `
-}
-
-const setupModalClose = () => {
-    document.querySelector("[data-close-modal-btn]").addEventListener("click", () => {
+    document.querySelector("[data-close-modal-hero-btn]").addEventListener("click", () => {
         document.querySelector("[data-hero-modal-container]").hidden = true;
     });
 }
 
-setupModalClose();
-getHeroes();
+
 

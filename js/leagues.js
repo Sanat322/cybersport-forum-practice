@@ -6,9 +6,9 @@ const leagueIds = new Set();
 const customBanners = {
     18043: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGigbtEqtXcMEoI1JNiG0IlGgmCEuw38GtTjQHw47_ZG6jEkhoCdjYcSDP1E6pksFhBiw&usqp=CAU",
     17233: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgORk4jKFguSqMH4YxnrXWz9t_Udro2e89vw&s",
-    17211: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpNvOFHRjfqWDHhpH0OZAsl9s6-1wwjWmvMQ&s",
-    17366: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfDJuPitnfcefdJYRB74sfNtjjFD328O9LNQ&s",
-    18331: "https://escharts.com/metaImage/tournaments/lunar-snake-trophy-2?social=twitter&v=1752258422"
+    17381: "https://dota2.ru/img/esport/tournament/1022.webp?1739338910",
+    17659: "https://escharts.com/metaImage/tournaments/epl-world-series-southeast-asia-season-4?social=twitter&v=1750688718",
+    17914: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4JUuyCQr53_r4D0obLSyJ7ps3OGbwxJi2ig&s"
 }
 const getActiveTournaments = async () => {
     try {

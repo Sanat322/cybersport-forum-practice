@@ -1,0 +1,101 @@
+.hero-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h2 {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.hero-preview-block {
+    display: flex;
+    align-items: center;
+    min-height: 780px;
+    justify-content: space-evenly;
+    background-image: url("/backgrounds/greyfade.jpg");
+    background-size: 200% 200%;
+    animation: gradientMove 20s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero-preview-block h2 {
+    font-size: 50px;
+}
+#attackTypeLine{
+    display: flex;
+    align-items: center;
+}
+
+.hero-video {
+    width: 700px;
+    height: 700px;
+    border-radius: 12px;
+}
+
+.hero-info {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #222425;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 50px;
+}
+
+.hero-stats h2 {
+    color: #c1c5c5;
+}
+
+.hero-stats-info {
+    display: flex;
+    align-items: center;
+}
+
+.hero-mini-profile {
+    width: 150px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hero-health {
+    background: linear-gradient(to right, #4caf50, #81c784);
+    text-align: center;
+}
+
+.hero-mana {
+    background: linear-gradient(to right, #2196f3, #64b5f6);
+    text-align: center;
+}
+
+.hero-attribute {
+    display: flex;
+    font-size: 23px;
+    font-family: 'Times New Roman', Times, serif;
+    gap: 4px;
+    margin-bottom: 10px;
+}
+
+.hero-roles h2 {
+    color: #c1c5c5;
+}
+
+.hero-roles-line {
+    height: 6px;
+    width: 134px;
+    background-color: rgba(255, 255, 255);
+}

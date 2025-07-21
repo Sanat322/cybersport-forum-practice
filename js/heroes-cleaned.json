@@ -36,7 +36,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Anti-Mage"
+    "localized_name": "Anti-Mage",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 2,
@@ -76,7 +77,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Axe"
+    "localized_name": "Axe",
+    "videoUrl": "https://www.youtube.com/embed/O_Qz3UxkuxY"
   },
   {
     "id": 3,
@@ -116,7 +118,8 @@
     "legs": 4,
     "day_vision": 1800,
     "night_vision": 1200,
-    "localized_name": "Bane"
+    "localized_name": "Bane",
+    "videoUrl": "https://www.youtube.com/embed/e31IuZvooGA"
   },
   {
     "id": 4,
@@ -156,7 +159,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Bloodseeker"
+    "localized_name": "Bloodseeker",
+    "videoUrl": "https://www.youtube.com/embed/Ci5qRNKr6T8"
   },
   {
     "id": 5,
@@ -195,7 +199,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Crystal Maiden"
+    "localized_name": "Crystal Maiden",
+    "videoUrl": "https://www.youtube.com/embed/ZYOtj66Nq0M"
   },
   {
     "id": 6,
@@ -234,7 +239,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Drow Ranger"
+    "localized_name": "Drow Ranger",
+    "videoUrl": "https://www.youtube.com/embed/VH0ll7JNbgE"
   },
   {
     "id": 7,
@@ -274,7 +280,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Earthshaker"
+    "localized_name": "Earthshaker",
+    "videoUrl": "https://www.youtube.com/embed/9wKI6iYdYK4"
   },
   {
     "id": 8,
@@ -313,7 +320,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Juggernaut"
+    "localized_name": "Juggernaut",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 9,
@@ -354,7 +362,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Mirana"
+    "localized_name": "Mirana",
+    "videoUrl": "https://www.youtube.com/embed/S3t7Og5smmc"
   },
   {
     "id": 10,
@@ -395,7 +404,8 @@
     "legs": 0,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Morphling"
+    "localized_name": "Morphling",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 11,
@@ -433,7 +443,8 @@
     "legs": 0,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Shadow Fiend"
+    "localized_name": "Shadow Fiend",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 12,
@@ -473,7 +484,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Phantom Lancer"
+    "localized_name": "Phantom Lancer",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 13,
@@ -513,7 +525,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Puck"
+    "localized_name": "Puck",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 14,
@@ -553,7 +566,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Pudge"
+    "localized_name": "Pudge",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 15,
@@ -593,7 +607,8 @@
     "legs": 0,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Razor"
+    "localized_name": "Razor",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 16,
@@ -634,7 +649,8 @@
     "legs": 6,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Sand King"
+    "localized_name": "Sand King",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 17,
@@ -675,7 +691,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Storm Spirit"
+    "localized_name": "Storm Spirit",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 18,
@@ -716,7 +733,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Sven"
+    "localized_name": "Sven",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 19,
@@ -758,7 +776,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Tiny"
+    "localized_name": "Tiny",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 20,
@@ -799,7 +818,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Vengeful Spirit"
+    "localized_name": "Vengeful Spirit",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 21,
@@ -840,7 +860,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Windranger"
+    "localized_name": "Windranger",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 22,
@@ -878,7 +899,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Zeus"
+    "localized_name": "Zeus",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 23,
@@ -920,7 +942,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Kunkka"
+    "localized_name": "Kunkka",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 25,
@@ -960,7 +983,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Lina"
+    "localized_name": "Lina",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 26,
@@ -1000,7 +1024,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Lion"
+    "localized_name": "Lion",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 27,
@@ -1041,7 +1066,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Shadow Shaman"
+    "localized_name": "Shadow Shaman",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 28,
@@ -1082,7 +1108,8 @@
     "legs": 0,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Slardar"
+    "localized_name": "Slardar",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 29,
@@ -1123,7 +1150,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Tidehunter"
+    "localized_name": "Tidehunter",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 30,
@@ -1162,7 +1190,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Witch Doctor"
+    "localized_name": "Witch Doctor",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 31,
@@ -1200,7 +1229,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Lich"
+    "localized_name": "Lich",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   
   {
@@ -1240,7 +1270,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Riki"
+    "localized_name": "Riki",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 33,
@@ -1279,7 +1310,8 @@
     "legs": 0,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Enigma"
+    "localized_name": "Enigma",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 34,
@@ -1318,7 +1350,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Tinker"
+    "localized_name": "Tinker",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 35,
@@ -1356,7 +1389,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 1400,
-    "localized_name": "Sniper"
+    "localized_name": "Sniper",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 36,
@@ -1396,7 +1430,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Necrophos"
+    "localized_name": "Necrophos",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 37,
@@ -1435,7 +1470,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Warlock"
+    "localized_name": "Warlock",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 38,
@@ -1475,7 +1511,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Beastmaster"
+    "localized_name": "Beastmaster",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 39,
@@ -1514,7 +1551,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Queen of Pain"
+    "localized_name": "Queen of Pain",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 40,
@@ -1555,7 +1593,8 @@
     "legs": 0,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Venomancer"
+    "localized_name": "Venomancer",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 41,
@@ -1596,7 +1635,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Faceless Void"
+    "localized_name": "Faceless Void",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 42,
@@ -1637,7 +1677,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Wraith King"
+    "localized_name": "Wraith King",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 43,
@@ -1677,7 +1718,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Death Prophet"
+    "localized_name": "Death Prophet",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 44,
@@ -1715,7 +1757,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Phantom Assassin"
+    "localized_name": "Phantom Assassin",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 45,
@@ -1753,7 +1796,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Pugna"
+    "localized_name": "Pugna",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 46,
@@ -1791,7 +1835,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Templar Assassin"
+    "localized_name": "Templar Assassin",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 47,
@@ -1831,7 +1876,8 @@
     "legs": 0,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Viper"
+    "localized_name": "Viper",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 48,
@@ -1870,7 +1916,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Luna"
+    "localized_name": "Luna",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 49,
@@ -1912,7 +1959,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Dragon Knight"
+    "localized_name": "Dragon Knight",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 50,
@@ -1951,7 +1999,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Dazzle"
+    "localized_name": "Dazzle",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 51,
@@ -1991,7 +2040,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Clockwerk"
+    "localized_name": "Clockwerk",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 52,
@@ -2032,7 +2082,8 @@
     "legs": 4,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Leshrac"
+    "localized_name": "Leshrac",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 53,
@@ -2072,7 +2123,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Nature's Prophet"
+    "localized_name": "Nature's Prophet",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 54,
@@ -2112,7 +2164,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Lifestealer"
+    "localized_name": "Lifestealer",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 55,
@@ -2151,7 +2204,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Dark Seer"
+    "localized_name": "Dark Seer",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 56,
@@ -2190,7 +2244,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Clinkz"
+    "localized_name": "Clinkz",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 57,
@@ -2229,7 +2284,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Omniknight"
+    "localized_name": "Omniknight",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 58,
@@ -2269,7 +2325,8 @@
     "legs": 4,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Enchantress"
+    "localized_name": "Enchantress",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 59,
@@ -2308,7 +2365,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Huskar"
+    "localized_name": "Huskar",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 60,
@@ -2349,7 +2407,8 @@
     "legs": 2,
     "day_vision": 800,
     "night_vision": 1800,
-    "localized_name": "Night Stalker"
+    "localized_name": "Night Stalker",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 61,
@@ -2389,7 +2448,8 @@
     "legs": 8,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Broodmother"
+    "localized_name": "Broodmother",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 62,
@@ -2427,7 +2487,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 1000,
-    "localized_name": "Bounty Hunter"
+    "localized_name": "Bounty Hunter",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 63,
@@ -2465,7 +2526,8 @@
     "legs": 4,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Weaver"
+    "localized_name": "Weaver",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 64,
@@ -2505,7 +2567,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Jakiro"
+    "localized_name": "Jakiro",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 65,
@@ -2544,7 +2607,8 @@
     "legs": 2,
     "day_vision": 1600,
     "night_vision": 800,
-    "localized_name": "Batrider"
+    "localized_name": "Batrider",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 66,
@@ -2582,7 +2646,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Chen"
+    "localized_name": "Chen",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 67,
@@ -2621,7 +2686,8 @@
     "legs": 0,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Spectre"
+    "localized_name": "Spectre",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 68,
@@ -2660,7 +2726,8 @@
     "legs": 0,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Ancient Apparition"
+    "localized_name": "Ancient Apparition",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 69,
@@ -2701,7 +2768,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Doom"
+    "localized_name": "Doom",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 70,
@@ -2740,7 +2808,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Ursa"
+    "localized_name": "Ursa",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 71,
@@ -2781,7 +2850,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Spirit Breaker"
+    "localized_name": "Spirit Breaker",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 72,
@@ -2820,7 +2890,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Gyrocopter"
+    "localized_name": "Gyrocopter",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 73,
@@ -2862,7 +2933,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Alchemist"
+    "localized_name": "Alchemist",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 74,
@@ -2903,7 +2975,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Invoker"
+    "localized_name": "Invoker",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 75,
@@ -2944,7 +3017,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Silencer"
+    "localized_name": "Silencer",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 76,
@@ -2983,7 +3057,8 @@
     "legs": 4,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Outworld Devourer"
+    "localized_name": "Outworld Devourer",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 77,
@@ -3023,7 +3098,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Lycan"
+    "localized_name": "Lycan",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 78,
@@ -3064,7 +3140,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Brewmaster"
+    "localized_name": "Brewmaster",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 79,
@@ -3104,7 +3181,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Shadow Demon"
+    "localized_name": "Shadow Demon",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 80,
@@ -3143,7 +3221,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Lone Druid"
+    "localized_name": "Lone Druid",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 81,
@@ -3184,7 +3263,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Chaos Knight"
+    "localized_name": "Chaos Knight",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 82,
@@ -3226,7 +3306,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Meepo"
+    "localized_name": "Meepo",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 83,
@@ -3267,7 +3348,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Treant Protector"
+    "localized_name": "Treant Protector",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 84,
@@ -3308,7 +3390,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Ogre Magi"
+    "localized_name": "Ogre Magi",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 85,
@@ -3348,7 +3431,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Undying"
+    "localized_name": "Undying",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 86,
@@ -3387,7 +3471,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Rubick"
+    "localized_name": "Rubick",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 87,
@@ -3427,7 +3512,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Disruptor"
+    "localized_name": "Disruptor",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 88,
@@ -3467,7 +3553,8 @@
     "legs": 6,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Nyx Assassin"
+    "localized_name": "Nyx Assassin",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 89,
@@ -3509,7 +3596,8 @@
     "legs": 0,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Naga Siren"
+    "localized_name": "Naga Siren",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 90,
@@ -3548,7 +3636,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Keeper of the Light"
+    "localized_name": "Keeper of the Light",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 91,
@@ -3587,7 +3676,8 @@
     "legs": 0,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Io"
+    "localized_name": "Io",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 92,
@@ -3628,7 +3718,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Visage"
+    "localized_name": "Visage",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 93,
@@ -3668,7 +3759,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 1800,
-    "localized_name": "Slark"
+    "localized_name": "Slark",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 94,
@@ -3707,7 +3799,8 @@
     "legs": 0,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Medusa"
+    "localized_name": "Medusa",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 95,
@@ -3747,7 +3840,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Troll Warlord"
+    "localized_name": "Troll Warlord",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 96,
@@ -3788,7 +3882,8 @@
     "legs": 4,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Centaur Warrunner"
+    "localized_name": "Centaur Warrunner",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 97,
@@ -3828,7 +3923,8 @@
     "legs": 4,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Magnus"
+    "localized_name": "Magnus",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 98,
@@ -3867,7 +3963,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Timbersaw"
+    "localized_name": "Timbersaw",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 99,
@@ -3907,7 +4004,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Bristleback"
+    "localized_name": "Bristleback",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 100,
@@ -3946,7 +4044,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Tusk"
+    "localized_name": "Tusk",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 101,
@@ -3985,7 +4084,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Skywrath Mage"
+    "localized_name": "Skywrath Mage",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 102,
@@ -4024,7 +4124,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Abaddon"
+    "localized_name": "Abaddon",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 103,
@@ -4064,7 +4165,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Elder Titan"
+    "localized_name": "Elder Titan",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 104,
@@ -4105,7 +4207,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Legion Commander"
+    "localized_name": "Legion Commander",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 105,
@@ -4143,7 +4246,8 @@
     "legs": 6,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Techies"
+    "localized_name": "Techies",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 106,
@@ -4184,7 +4288,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Ember Spirit"
+    "localized_name": "Ember Spirit",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 107,
@@ -4225,7 +4330,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Earth Spirit"
+    "localized_name": "Earth Spirit",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 108,
@@ -4266,7 +4372,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Underlord"
+    "localized_name": "Underlord",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 109,
@@ -4305,7 +4412,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Terrorblade"
+    "localized_name": "Terrorblade",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 110,
@@ -4346,7 +4454,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Phoenix"
+    "localized_name": "Phoenix",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 111,
@@ -4386,7 +4495,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Oracle"
+    "localized_name": "Oracle",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 112,
@@ -4425,7 +4535,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 1200,
-    "localized_name": "Winter Wyvern"
+    "localized_name": "Winter Wyvern",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 113,
@@ -4464,7 +4575,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Arc Warden"
+    "localized_name": "Arc Warden",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 114,
@@ -4504,7 +4616,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Monkey King"
+    "localized_name": "Monkey King",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 119,
@@ -4544,7 +4657,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Dark Willow"
+    "localized_name": "Dark Willow",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 120,
@@ -4586,7 +4700,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Pangolier"
+    "localized_name": "Pangolier",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 121,
@@ -4626,7 +4741,8 @@
     "legs": 0,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Grimstroke"
+    "localized_name": "Grimstroke",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 123,
@@ -4666,7 +4782,8 @@
     "legs": 4,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Hoodwink"
+    "localized_name": "Hoodwink",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 126,
@@ -4706,7 +4823,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Void Spirit"
+    "localized_name": "Void Spirit",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 128,
@@ -4746,7 +4864,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Snapfire"
+    "localized_name": "Snapfire",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 129,
@@ -4786,7 +4905,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Mars"
+    "localized_name": "Mars",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 131,
@@ -4826,7 +4946,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Ring Master"
+    "localized_name": "Ring Master",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 135,
@@ -4864,7 +4985,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Dawnbreaker"
+    "localized_name": "Dawnbreaker",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 136,
@@ -4905,7 +5027,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Marci"
+    "localized_name": "Marci",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 137,
@@ -4944,7 +5067,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Primal Beast"
+    "localized_name": "Primal Beast",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 138,
@@ -4983,7 +5107,8 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Muerta"
+    "localized_name": "Muerta",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   },
   {
     "id": 145,
@@ -5022,6 +5147,7 @@
     "legs": 2,
     "day_vision": 1800,
     "night_vision": 800,
-    "localized_name": "Kez"
+    "localized_name": "Kez",
+    "videoUrl": "https://www.youtube.com/embed/LmXksEu8m2M"
   }
 ]

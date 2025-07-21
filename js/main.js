@@ -1,7 +1,7 @@
 'use strict'
 import { searchPlayer, getPlayersInfo } from './search.js';
 import { showModal, setupModalClose} from './modal.js';
-import{getHeroes} from './heroes.js';
+import{getHeroes, showModalHero} from './heroes.js';
 const main = document.querySelector(".whole-content");
 
 const sideBarToggleBtn = document.querySelector("[data-toggle-sidebar]");
