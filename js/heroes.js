@@ -55,7 +55,7 @@ const showModalHero = (chosenHero) => {
 }
 
 const setupModalClose = () => {
-    document.querySelector("[data-close-hero-modal-btn]").addEventListener("click", () => {
+    document.querySelector("[data-close-modal-btn]").addEventListener("click", () => {
         document.querySelector("[data-hero-modal-container]").hidden = true;
     });
 }
