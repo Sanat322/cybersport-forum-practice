@@ -16,7 +16,7 @@ const getItems = async () => {
             
                 <div class = "item-link" data-item-icon>
                     <a href="itemPage.html?name=${encodeURIComponent(item.name)}" class = "item-link-element">
-                        <img class = "item-card-image" src ="${testImgUrl}" title = "${item.name}" />
+                        <img class = "item-card-image" src ="${itemImgUrl}" title = "${item.name}" />
                         <span>${item.name} (${item.cost})<img src ="./icons-proect/gold_symbol.webp" width = 10 height = 10></span>
                     </a>    
                 </div>
