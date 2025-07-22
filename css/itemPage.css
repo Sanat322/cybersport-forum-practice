@@ -1,0 +1,22 @@
+.item-container{
+    display: flex;
+}
+
+.infobox{
+    width: 25rem;
+    text-align: center;
+}
+.infobox-image{
+    text-align: center;
+}
+.infobox td{
+    text-align: left;
+}
+.item-abilities-info{
+    width: 460px;
+}
+.item-abilities-info h1{
+background: linear-gradient(180deg,rgba(34, 110, 34, 1) 0%, rgba(29, 56, 29, 1) 51%, rgba(28, 37, 46, 1) 100%);
+height: 100px;
+margin: 0;
+}

@@ -91,6 +91,7 @@ header {
     color: #fefeff;
     transition: 0.2s ease-in-out;
     outline: none;
+    padding: 5px 10px;
 }
 
 .header__search-input:focus {

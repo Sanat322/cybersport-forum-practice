@@ -1,7 +1,7 @@
 'use strict'
 import { searchPlayer, getPlayersInfo } from './search.js';
 import { showModal, setupModalClose} from './modal.js';
-import{getHeroes, showModalHero} from './heroes.js';
+import{getHeroes} from './heroes.js';
 const main = document.querySelector(".whole-content");
 
 const sideBarToggleBtn = document.querySelector("[data-toggle-sidebar]");
@@ -89,7 +89,7 @@ searchButtonElement.addEventListener("click", () => {
 
 
 showNews(
-    "https://www.reddit.com/r/DotA2.json",
+    "http://dota2.ru/news/rss/",
     "[data-news-block]", 10
 );
 

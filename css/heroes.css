@@ -1,4 +1,4 @@
-.hero-container{
+.hero-container {
     display: flex;
     gap: 20px;
     width: 800px;
@@ -6,27 +6,29 @@
     margin: 0 auto;
     align-items: center;
 }
-.hero-atribut-group{
+
+.hero-atribut-group {
     display: flex;
-    width: 25rem;
-    
+    width: 25rem;   
     flex-wrap: wrap;
 }
 
-.group-title{
+.group-title {
     display: flex;
 }
-.hero-card{
+
+.hero-card {
     display: flex;
     padding: 3px;
     margin: 0;
 }
 
-.hero-card-image{
+.hero-card-image {
     height: 30px;
     width: 50px;
     object-fit: contain;
 }
-.hero-card-image:hover{
-   transform: scale(1.2);
+
+.hero-card-image:hover {
+    transform: scale(1.2);
 }

@@ -47,7 +47,6 @@ const renderLeagueCard = (leagues) => {
   background-repeat: no-repeat;
   background-position: center;
   ">
-                <h2>${league.name}</h2>
                 <p class="league-card-tier">🔴 Активный турнир, tier ${league.tier}</p>
                 
             </div>

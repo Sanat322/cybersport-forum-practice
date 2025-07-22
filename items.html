@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/items.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/playerModal.css">
+</head>
+
+<body>
+    <div class="layout" data-sidebar>
+        <aside>
+            <nav>
+                <ul class="layout-list">
+                    <li><a href="">Блог</a></li>
+                    <li><a href="">Игроки</a></li>
+                    <li><a href="">Киберспорт</a></li>
+                    <li><a href="">Форумы</a></li>
+                    <li><a href="items.html">Предметы</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+    <div class="whole-content">
+        <header class="header">
+            <div class="header__menu">
+                <button class="sidebar-menu-btn" type="button" data-toggle-sidebar><img class="sidebar-menu-btn-image"
+                        src="icons-proect/interface-ui-menu-list-hamburger-svgrepo-com.svg" alt="">DOTASTUFF</button>
+                <ul class="menu-list">
+                    <li class="menu-list-icon"><a href="" class="menu-list-icon-link" data-border="#166dca"><img
+                                src="icons-proect/steam-svgrepo-com (1).svg" alt=""
+                                class="menu-list-icon-image">Войти</a>
+                    </li>
+                    <li class="menu-list-icon"><a href="main.html" data-border="#3e0b77">Home</a></li>
+                    <li class="menu-list-icon"><a href="teams.html" data-border="#88f4f8">Teams Standings</a></li>
+                    <li class="menu-list-icon"><a href="heroes.html" data-border="#d80000">Heroes</a></li>
+                </ul>
+                <div class="header__search">
+                    <input type="text" class="header__search-input" id="searchInput" placeholder="seach player nickname"
+                        data-search-input>
+                    <button class="header__search-btn" type="button" data-search-btn><img
+                            class="header__search-btn-image" src="icons-proect/search-svgrepo-com.svg" alt=""></button>
+                </div>
+            </div>
+
+        </header>
+        <main>
+            <div class="items-block" data-item-block>
+                <div class="item-group">
+                    <div class="item-group-title">
+                        <img src="icons-proect/Shop_Consumables_Icon.webp" alt=""><span>Consumables</span>
+                    </div>
+                    <div class="itemCategory" data-item-category="Consumables"></div>
+                </div>
+                <div class="item-group">
+                    <div class="item-group-title">
+                        <img src="icons-proect/Shop_Attributes_Icon.webp" alt=""><span>Attributes</span>
+                    </div>
+                    <div class="itemCategory" data-item-category="Attributes"></div>
+                </div>
+                <div class="item-group">
+                    <div class="item-group-title">
+                        <img src="icons-proect/Shop_Armaments_Icon.webp" alt=""><span>Equipment</span>
+                    </div>
+                    <div class="itemCategory" data-item-category="Armaments"></div>
+                </div>
+                <div class="item-group">
+                    <div class="item-group-title">
+                        <img src="icons-proect/Shop_Arcane_Icon.webp" alt=""><span>Miscellaneous</span>
+                    </div>
+                    <div class="itemCategory" data-item-category="Arcane"></div>
+                </div>
+                <div class="item-group">
+                    <div class="item-group-title">
+                        <img src="icons-proect/Shop_Common_Icon.webp" alt=""><span>Accessories</span>
+                    </div>
+                    <div class="itemCategory" data-item-category="Common"></div>
+                </div>
+                <div class="item-group">
+                    <div class="item-group-title">
+                        <img src="icons-proect/Shop_Support_Icon.webp" alt=""><span>Support</span>
+                    </div>
+                    <div class="itemCategory" data-item-category="Support"></div>
+                </div>
+                <div class="item-group">
+                    <div class="item-group-title">
+                        <img src="icons-proect/Shop_Caster_Icon.webp" alt=""><span>Magical</span>
+                    </div>
+                    <div class="itemCategory" data-item-category="Caster"></div>
+                </div>
+                <div class="item-group">
+                    <div class="item-group-title">
+                        <img src="icons-proect/Shop_Weapons_Icon.webp" alt=""><span>Weapons</span>
+                    </div>
+                    <div class="itemCategory" data-item-category="Weapons"></div>
+                </div>
+                <div class="item-group">
+                    <div class="item-group-title">
+                        <img src="icons-proect/Shop_Armor_Icon.webp" alt=""><span>Armor</span>
+                    </div>
+                    <div class="itemCategory" data-item-category="Armor"></div>
+                </div>
+                <div class="item-group">
+                    <div class="item-group-title">
+                        <img src="icons-proect/Shop_Artifacts_Icon.webp" alt=""><span>Artifacts</span>
+                    </div>
+                    <div class="itemCategory" data-item-category="Artifacts"></div>
+                </div>
+                <div class="item-group">
+                    <div class="item-group-title">
+                        <img src="icons-proect/Shop_Secret_Icon.webp" alt=""><span>Secret</span>
+                    </div>
+                    <div class="itemCategory" data-item-category="Secret shop"></div>
+                </div>
+            </div>
+        </main>
+        <div class="modal-container" data-modal-container hidden>
+            <button class="modal-container-close-btn" data-close-modal-btn>❌</button>
+            <div class="playerModal" data-player-info-container></div>
+        </div>
+    </div>
+    <script src="js/main.js" type="module"></script>
+    <script src="js/items.js"></script>
+</body>
+
+</html>
