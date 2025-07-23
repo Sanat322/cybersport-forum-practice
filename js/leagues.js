@@ -8,7 +8,8 @@ const customBanners = {
     17233: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgORk4jKFguSqMH4YxnrXWz9t_Udro2e89vw&s",
     17381: "https://dota2.ru/img/esport/tournament/1022.webp?1739338910",
     17659: "https://escharts.com/metaImage/tournaments/epl-world-series-southeast-asia-season-4?social=twitter&v=1750688718",
-    17914: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4JUuyCQr53_r4D0obLSyJ7ps3OGbwxJi2ig&s"
+    17914: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4JUuyCQr53_r4D0obLSyJ7ps3OGbwxJi2ig&s",
+    18409: "https://static-cdn.jtvnw.net/jtv_user_pictures/e3ac9e3a-1e47-4e8b-a3ad-5519edcb1930-profile_banner-480.png"
 }
 const getActiveTournaments = async () => {
     try {

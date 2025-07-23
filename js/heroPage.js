@@ -5,10 +5,19 @@ const heroName = params.get('name');
 
 const loadHeroPage = async () => {
     try {
-        const res = await fetch('js/heroes-cleaned.json');
-        const heroes = await res.json();
+        /* const res = await fetch('js/heroes-cleaned.json');
+        const heroes = await res.json(); */
+        const [heroes, abilities] = await Promise.all([
+            fetch('js/heroes-cleaned.json').then(r => r.json()),
+            fetch('js/abilities.json').then(r => r.json())
+        ]);
         const heroContainer = document.querySelector(".hero-details");
         const hero = heroes.find(h => h.localized_name === heroName);
+        const heroKey = hero.name.replace("npc_dota_hero_", "");
+        const heroAbilitiesList = Object.values(abilities).filter(a => a.Name.startsWith(heroKey));
+        const abilityContainer = document.createElement("div");
+        abilityContainer.classList.add("ability-container")
+
         const heroVideoPreview = hero.name
             .replace("npc_dota_hero_", "")
             + ".webm";
@@ -42,8 +51,6 @@ const loadHeroPage = async () => {
                         Your browser does not support the video tag.
                 </video>
             </div>
-                
-            
                 <div class = "hero-characteristics">
                     <div class = "hero-info">
                         <div class = "hero-mini-profile">
@@ -89,24 +96,63 @@ const loadHeroPage = async () => {
                             
                         </div>
                     </div>
-                </div>
-                ${hero.videoUrl ? `
-                <div class="hero-video-wrapper">
-                    <iframe 
-                        width="400" 
-                        height="250" 
-                        src="${hero.videoUrl}" 
-                        title="Hero video" 
-                        frameborder="0" 
-                        allowfullscreen>
-                    </iframe>
-                </div>` : ""}
+                    <div class="ability-slider">
+                        <div class="ability-icons" data-ability-icons></div>
+                        <div class="ability-display">
+                            <video data-ability-video autoplay muted loop playsinline width="800">
+                                <source data-ability-video-source src="" type="video/webm">
+                            </video>
+                            
+                            <div class ="ability-info" data-ability-info>
+                                <div class ="ability-info-title">
+                                    <img data-ability-info-icon src ="" alt ="Ability Icon" width = 40 height = 40 />
+                                    <p><strong></strong><span data-ability-info-name>-</span></p>
+                                </div>
+                                <p><strong>Mana cost: </strong><span data-ability-info-manacost>-</span></</p>
+                                <p><strong>Cooldown: </strong><span data-ability-info-cooldown>-</span></p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>        
          </div>
-         
          `;
         const attackTypeLine = document.querySelector("#attackTypeLine");
         attackTypeLine.append(attackTypeElement);
-        //  heroContainer.append(attackTypeElement);
+        const abilityIconsContainer = document.querySelector("[data-ability-icons]");
+        const abilityVideo = document.querySelector("[data-ability-video]");
+        let abilityVideoSource = document.querySelector("[data-ability-video-source]");
+        const abilityInfoIcon = document.querySelector("[data-ability-info-icon]");
+        let abilityInfoName = document.querySelector("[data-ability-info-name]");
+        let abilityInfoManaCost = document.querySelector("[data-ability-info-manacost]");
+        let abilityInfoManaCooldown = document.querySelector("[data-ability-info-cooldown]");
+        heroAbilitiesList.forEach(ability => {
+            const abilityId = ability.Name;
+            const shortName = abilityId.replace(`${heroKey}_`, "").replace(/_/g, " ");
+            const abilityIconUrl = `https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/abilities/${abilityId}.png`;
+            const abilityVideoUrl = `https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/abilities/${heroKey}/${abilityId}.webm`;
+
+            const abilityButton = document.createElement("img");
+            abilityButton.src = abilityIconUrl;
+            abilityButton.alt = shortName;
+            abilityButton.classList.add("ability-icon-btn");
+            abilityButton.title = shortName;
+
+            abilityButton.addEventListener("click", () => {
+                abilityVideoSource.src = abilityVideoUrl;
+                abilityVideo.load();
+
+                abilityInfoName.textContent = shortName;
+                abilityInfoIcon.src = abilityIconUrl;
+                abilityInfoManaCost.textContent = ability.Manacost?.join('/') || "—";
+                abilityInfoManaCooldown.textContent = ability.Cooldown?.join('/') || "—";
+            })
+
+            abilityIconsContainer.appendChild(abilityButton);
+            if (abilityIconsContainer.firstChild) {
+                abilityIconsContainer.firstChild.click();
+            }
+        })
     }
     catch (error) {
         console.error("произошла ошибка в процессе показа карточки героя!", error.message)

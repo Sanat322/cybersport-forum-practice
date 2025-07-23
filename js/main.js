@@ -89,7 +89,7 @@ searchButtonElement.addEventListener("click", () => {
 
 
 showNews(
-    "https://dotesports.com/dota-2/feed",
+    "",
     "[data-news-block]", 10
 );
 

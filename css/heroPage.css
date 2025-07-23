@@ -21,21 +21,24 @@ h2 {
 }
 
 @keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .hero-preview-block h2 {
     font-size: 50px;
 }
-#attackTypeLine{
+
+#attackTypeLine {
     display: flex;
     align-items: center;
 }
@@ -98,4 +101,52 @@ h2 {
     height: 6px;
     width: 134px;
     background-color: rgba(255, 255, 255);
+}
+
+
+.ability-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.ability-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.ability-icon-btn {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.ability-icon-btn:hover {
+    border-color: #fff;
+}
+
+.ability-display {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+    text-transform: uppercase;
+    font-weight: 800;
+    gap: 20px;
+}
+
+
+.ability-info{
+    background-color: #000000;
+    padding: 20px;
+    
+}
+.ability-info-title{
+    display: flex;
+    background-color: #121212;
+    gap: 20px;
+    margin-bottom: 20px;
 }
