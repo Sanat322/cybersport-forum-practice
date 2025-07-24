@@ -5,16 +5,16 @@ const heroName = params.get('name');
 
 const loadHeroPage = async () => {
     try {
-        /* const res = await fetch('js/heroes-cleaned.json');
-        const heroes = await res.json(); */
-        const [heroes, abilities] = await Promise.all([
+        const [heroes, abilities, abilitiesDesc] = await Promise.all([
             fetch('js/heroes-cleaned.json').then(r => r.json()),
-            fetch('js/abilities.json').then(r => r.json())
+            fetch('js/abilities.json').then(r => r.json()),
+            fetch('js/abilities-desc-cleaned.json').then(r => r.json())
         ]);
         const heroContainer = document.querySelector(".hero-details");
         const hero = heroes.find(h => h.localized_name === heroName);
         const heroKey = hero.name.replace("npc_dota_hero_", "");
         const heroAbilitiesList = Object.values(abilities).filter(a => a.Name.startsWith(heroKey));
+        const heroAbilityIds = abilitiesDesc[heroKey] || [];
         const abilityContainer = document.createElement("div");
         abilityContainer.classList.add("ability-container")
 
@@ -33,10 +33,12 @@ const loadHeroPage = async () => {
         const attackTypeElement = document.createElement("img");
         attackTypeElement.src = attackIcon;
         attackTypeElement.classList.add("attack-type");
-        // иконки атрибутов
+        // иконка типа атаки
 
         const formatedName = hero.localized_name.replace(/\s+/g, "_");
         const customPath = `heroes-images/${formatedName}_icon.webp`;
+        // путь к мини-профилю персонажа
+
         heroContainer.innerHTML =
             `
          <div class = "hero-page">
@@ -108,6 +110,7 @@ const loadHeroPage = async () => {
                                     <img data-ability-info-icon src ="" alt ="Ability Icon" width = 40 height = 40 />
                                     <p><strong></strong><span data-ability-info-name>-</span></p>
                                 </div>
+                                <p data-ability-desc></</p>
                                 <p><strong>Mana cost: </strong><span data-ability-info-manacost>-</span></</p>
                                 <p><strong>Cooldown: </strong><span data-ability-info-cooldown>-</span></p>
                             </div>
@@ -119,16 +122,23 @@ const loadHeroPage = async () => {
          `;
         const attackTypeLine = document.querySelector("#attackTypeLine");
         attackTypeLine.append(attackTypeElement);
+        
+
         const abilityIconsContainer = document.querySelector("[data-ability-icons]");
         const abilityVideo = document.querySelector("[data-ability-video]");
         let abilityVideoSource = document.querySelector("[data-ability-video-source]");
+        // слайдер с видео способностей
+
         const abilityInfoIcon = document.querySelector("[data-ability-info-icon]");
         let abilityInfoName = document.querySelector("[data-ability-info-name]");
         let abilityInfoManaCost = document.querySelector("[data-ability-info-manacost]");
         let abilityInfoManaCooldown = document.querySelector("[data-ability-info-cooldown]");
-        heroAbilitiesList.forEach(ability => {
-            const abilityId = ability.Name;
-            const shortName = abilityId.replace(`${heroKey}_`, "").replace(/_/g, " ");
+        // описание способностей 
+
+        heroAbilityIds.forEach(id => {
+            const data = abilities[id];
+            
+            const shortName = id.replace(`${heroKey}_`, "").replace(/_/g, " ");
             const abilityIconUrl = `https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/abilities/${abilityId}.png`;
             const abilityVideoUrl = `https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/abilities/${heroKey}/${abilityId}.webm`;
 
@@ -144,8 +154,8 @@ const loadHeroPage = async () => {
 
                 abilityInfoName.textContent = shortName;
                 abilityInfoIcon.src = abilityIconUrl;
-                abilityInfoManaCost.textContent = ability.Manacost?.join('/') || "—";
-                abilityInfoManaCooldown.textContent = ability.Cooldown?.join('/') || "—";
+                abilityInfoManaCost.textContent = data.mc?.join('/') || "—";
+                abilityInfoManaCooldown.textContent = data.cd?.join('/') || "—";
             })
 
             abilityIconsContainer.appendChild(abilityButton);

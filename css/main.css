@@ -173,6 +173,7 @@ header {
 .main-content {
     display: flex;
     justify-content: center;
+    gap: 50px;
 }
 
 .news-block {
@@ -187,14 +188,17 @@ header {
 .news {
     display: flex;
     flex-direction: column;
-    width: 800px;
-    margin: 0 auto;
-    gap: 5px;
+    width: 30rem;
+    /* margin: 0 auto; */
+    gap: 20px;
 }
 
 .news__item {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .news__item img {
@@ -222,15 +226,14 @@ header {
 }
 
 .league-block {
-    padding-top: 50px;
-    display: flex;
+    padding-top: 100px;
     flex-direction: row;
     flex-wrap: wrap;
     width: 420px;
     /* margin: 0 auto; */
     background-color: #1c252e;
     justify-content: center;
-    gap: 10px;
+    /* gap: 10px; */
 }
 
 .league-card {
@@ -238,6 +241,7 @@ header {
     height: 160px;
     padding: 20px;
     border-radius: 12px;
+    margin-bottom: 50px;
 }
 
 .league-card:hover {

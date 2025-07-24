@@ -1,4 +1,21 @@
-.modal-container {
+.modal-container{
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+        display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); 
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-container-active {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -10,11 +27,16 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7); 
-
+    opacity: 1;
+    visibility: visible;
+}
+.modal-container-off{
+    opacity: 0;
+    visibility: hidden;
 }
 
-.modal-container[hidden] {
-    display: none;
+.modal-container .modal-container-close-btn{
+    visibility: hidden;
 }
 
 .modal-container-close-btn {
@@ -22,10 +44,14 @@
     height: 30px;
     padding: 0;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 230px;
+    right: 470px;
     cursor: pointer;
 
+}
+.modal-container-active .modal-container-close-btn {
+    opacity: 1;
+    visibility: visible;
 }
 
 .player-card {
@@ -33,11 +59,11 @@
     gap: 100px;
     background-color: #2e3740;
     height: 12.5rem;
+    padding: 20px;
 }
 
 .player-card-avatar {
     width: 200px;
     height: 200px;
     object-fit: contain;
-    padding-left: 50px;
 }

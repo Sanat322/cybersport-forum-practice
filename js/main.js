@@ -1,7 +1,8 @@
 'use strict'
 import { searchPlayer, getPlayersInfo } from './search.js';
-import { showModal, setupModalClose} from './modal.js';
-import{getHeroes} from './heroes.js';
+import { showModal, setupModalClose } from './modal.js';
+import { getHeroes } from './heroes.js';
+import { newsData } from './newsList.js';
 const main = document.querySelector(".whole-content");
 
 const sideBarToggleBtn = document.querySelector("[data-toggle-sidebar]");
@@ -15,12 +16,10 @@ let players = [];
 const header = document.querySelector(".header");
 const links = document.querySelectorAll(".menu-list a");
 // иконки героев 
-    const heroIcons = document.querySelector("[data-hero-icon]");
 
 links.forEach(link => {
     const color = link.dataset.border;
     link.addEventListener("mouseenter", () => {
-
         header.style.borderBottomColor = color;
     })
     link.addEventListener("mouseleave", () => {
@@ -33,44 +32,24 @@ function toggleSideBar() {
     sideBarToggleBtn.addEventListener("click", () => {
         sideBar.classList.toggle("open");
     })
-    main.addEventListener("click", (e)=>{
-        if (!sideBar.contains(e.target) && !sideBarToggleBtn.contains(e.target)){
+    main.addEventListener("click", (e) => {
+        if (!sideBar.contains(e.target) && !sideBarToggleBtn.contains(e.target)) {
             sideBar.classList.remove("open")
         }
     })
 }
 
-function showNews(URL, containerSelector, limit) {
-    const apiURL = URL;
-    fetch(apiURL)
-        .then(res => res.json())
-        .then(data => {
-            const newsContainer = document.querySelector(containerSelector);
-            if (!newsContainer) return;
-            newsContainer.innerHTML = ""
-            const posts = data.data.children;
-            const newsList = posts.map(post => ({
-                title: post.data.title,
-                link: "https://reddit.com" + post.data.permalink,
-                description: post.data.selftext || "Перейдите по ссылке на reddit.com/r/DotA2 для прочтения",
-                image: post.data.thumbnail && post.data.thumbnail.startsWith("http") ? post.data.thumbnail : null
-            }));
-            renderNews(newsList, newsContainer, limit)
-        });
-
-
-}
 
 const renderNews = (dotaPosts, container, limit) => {
     dotaPosts.slice(0, limit).forEach(post => {
         const newsPost = document.createElement("div")
         newsPost.classList.add("news__item")
-        const image = post.thumbnail;
+        const image = post.image;
         newsPost.innerHTML = `
             
-            ${image ? `<img src="${image}" alt="" style="max-width:150px;">` : ""}
+            ${image ? `<img src="${image}" alt="" style="width:350px; height: 200px;object-fit : contain;">` : ""}
           <h3><a href="${post.link}" target="_blank"  class = "news-item-title">${post.title}</a></h3>
-          <p>${post.description.slice(0, 150)}...</p>
+          <p>${post.description.slice(0, 150)}</p>
             `
         container.append(newsPost);
     })
@@ -88,10 +67,10 @@ searchButtonElement.addEventListener("click", () => {
 })
 
 
-showNews(
-    "",
-    "[data-news-block]", 10
-);
+if (document.querySelector("[data-news-block]")) {
+  const newsContainer = document.querySelector("[data-news-block]");
+  renderNews(newsData, newsContainer, 10);
+}
 
 getHeroes();
 setupModalClose();

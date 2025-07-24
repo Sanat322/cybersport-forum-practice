@@ -6,10 +6,11 @@ const leagueIds = new Set();
 const customBanners = {
     18043: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGigbtEqtXcMEoI1JNiG0IlGgmCEuw38GtTjQHw47_ZG6jEkhoCdjYcSDP1E6pksFhBiw&usqp=CAU",
     17233: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgORk4jKFguSqMH4YxnrXWz9t_Udro2e89vw&s",
-    17381: "https://dota2.ru/img/esport/tournament/1022.webp?1739338910",
+    17381: "https://d3dwep9z8m8y9r.cloudfront.net/publications/2023/11/publications-10593/preview/43013/Site_548x400.png",
     17659: "https://escharts.com/metaImage/tournaments/epl-world-series-southeast-asia-season-4?social=twitter&v=1750688718",
     17914: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4JUuyCQr53_r4D0obLSyJ7ps3OGbwxJi2ig&s",
-    18409: "https://static-cdn.jtvnw.net/jtv_user_pictures/e3ac9e3a-1e47-4e8b-a3ad-5519edcb1930-profile_banner-480.png"
+    18409: "https://static-cdn.jtvnw.net/jtv_user_pictures/e3ac9e3a-1e47-4e8b-a3ad-5519edcb1930-profile_banner-480.png",
+    18433: "https://static.gosugamers.net/1c/39/fe/badc284597f4143143e79f6970db581645eca94796460b572ea86b2c98.webp"
 }
 const getActiveTournaments = async () => {
     try {
@@ -53,7 +54,7 @@ const renderLeagueCard = (leagues) => {
             </div>
             `
             )
-            console.log(league.name && league.leagueid);
+            // console.log(league.name && league.leagueid);
         }
 
         )

@@ -1,4 +1,4 @@
-import fs from 'fs';
+const fs = require('fs');
 
 const rawData = fs.readFileSync('abilities-with-desc.json', 'utf-8');
 const abilities = JSON.parse(rawData);
@@ -16,4 +16,4 @@ for (const key in abilities) {
 }
 
 fs.writeFileSync('abilities-desc-cleaned.json', JSON.stringify(filtered, null, 2));
-console.log("✅ abilities-cleaned.json создан!");
+console.log("✅ abilities-desc-cleaned.json создан!");

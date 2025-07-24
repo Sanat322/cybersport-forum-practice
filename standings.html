@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/itemPage.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/standings.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/playerModal.css">
 </head>
 
 <body>
@@ -46,16 +47,46 @@
             </div>
 
         </header>
-        <main>
-            <div class="item-container"></div>
-        </main>
+        <div class="players-container">
+            <div class="layout" data-sidebar>
+                <aside>
+                    <nav>
+                        <ul class="layout-list">
+                            <li><a href="">Блог</a></li>
+                            <li><a href="">Игроки</a></li>
+                            <li><a href="">Киберспорт</a></li>
+                            <li><a href="">Форумы</a></li>
+                            <li><a href="">Матчи</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+            </div>
+            <h2>ТАБЛИЦА ЛИДЕРОВ РЕЙТИНГА</h2>
+            <p>топ 20 команд в Dota 2</p>
+            <div class="players__info-block">
+                <div class="leaderboard">
+                    <table class="table-teams">
+                        <thead>
+                            <tr class="table-header">
+                                <th><span class="table-parts">Rank</span></th>
+                                <th><span class="table-parts">Name</span></th>
+                                <th><span class="table-parts">Wins</span></th>
+                                <th><span class="table-parts">Loses</span></th>
+                                <th><span class="table-parts">Rating</span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tBody" class="table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="modal-container" data-modal-container hidden>
+            <button class="modal-container-close-btn" data-close-modal-btn>❌</button>
+            <div class="playerModal" data-player-info-container></div>
+        </div>
     </div>
-    <div class="modal-container modal-container-off" data-modal-container hidden>
-        <button class="modal-container-close-btn" data-close-modal-btn>❌</button>
-        <div class="playerModal" data-player-info-container></div>
-    </div>
-    <script src="js/main.js" type="module"></script>
-    <script src="js/itemPage.js"></script>
+    <script src="js/main.js" type="module" defer></script>
+    <script src="js/players.js"></script>
 </body>
 
 </html>
