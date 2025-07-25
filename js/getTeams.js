@@ -1,7 +1,7 @@
 'use strict'
 
 const TopTeams = ["Team Spirit", "Gaimin Gladiators", "Team Liquid",
-    "Tundra Esports", "BetBoom Team", "OG", "Virtus.pro","Nigma Galaxy", "Team Falcons"];
+    "Tundra Esports", "BB Team", "Xtreme Gaming","Nigma Galaxy", "Team Falcons", "PVISION", "Aurora Gaming", "BOOM Esports", "Team Tidebound", "HEROIC", "Team Nemesis","NAVI Junior"];
 
 const getPopularTeams = async () =>{
     const res  = await fetch("js/proPlayers-cleaned.json");
@@ -15,16 +15,30 @@ const getPopularTeams = async () =>{
         }
         teamsMap[team].push(player);
     })
-    console.log(teamsMap)
+    renderTeamPlayers(teamsMap);
 }
 const renderTeamPlayers = (teams) =>{
-    teams.forEach(([teamName, players]) =>{
+    const container = document.querySelector("[data-teams-container]");
+    container.innerHTML = "";
+    Object.entries(teams).forEach(([teamName, players]) =>{
         const teamContainer = document.createElement("div");
         teamContainer.classList.add("team-container");
-        const logoPath = team.team_name.replace(" ","_");
+        const logoPath = teamName.replace(/\s/g,"_");
         teamContainer.innerHTML = `
-        <img src = "./team-logos/${logoPath}.png" width = 100 />
-        `
+            <a href ="">
+                <p>${teamName}</p>
+                <img class ="team-logo" src = "./team-logos/${logoPath}.png" />
+                <ul>
+                    ${players.slice(0,5).map(player =>`
+                        <li>
+                            <div class = "team-player-card">
+                                <span>${player.name}</span>
+                            </div>
+                        </li>`).join("")}
+                </ul>
+            </a>
+        `;
+        container.appendChild(teamContainer);
     })
 }
 

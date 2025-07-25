@@ -1,0 +1,138 @@
+main {
+    margin: 0 auto;
+    max-width: 1000px;
+    background-color: var(--main-content);
+    z-index: 1;
+    position: relative;
+}
+
+:root {
+    --main-content: #2e3338;
+}
+
+h2 {
+    padding: 2px 0 20px 0;
+    margin: 0;
+}
+
+td {
+    padding: 3px 10px;
+    font-size: 15px;
+}
+
+tr {
+    border-bottom: 5px solid #fff;
+}
+
+.overlay {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 350px;
+    background: 
+    linear-gradient(to bottom, rgba(46, 51, 55, 0.3), var(--main-content)),
+    url("/backgrounds/layoutBg.png") center/cover no-repeat;
+    overflow: hidden;
+    background-position: center;
+    opacity: 0.8;
+    background-color: transparent;
+    background-size: cover;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.overlay::before {
+    content: "";
+    background: url('/backgrounds/bg_news.jpg') center/cover no-repeat;
+    position: absolute;
+    inset: 0;
+    opacity: 0.46;
+    z-index: -1;
+    background-size: cover;
+}
+
+.overlay::after {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(46, 51, 55, 0) 0%,
+            var(--main-content) 100%);
+}
+
+.content-block {
+    display: flex;
+    padding-top: 100px;
+}
+
+.international-block {
+    display: block;
+    /* background-image: url('/backgrounds/bPllUs-lines-transparent-picture.png'); */
+    max-height: fit-content;
+    background-color: #38434d;
+}
+
+.international-block-title {
+    padding: 20px 15px 0 15px;
+}
+
+.international-block-info {
+    padding: 0 15px 15px;
+}
+
+.teams-block {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.team-container {
+    width: 100px;
+    height: 150px;
+    margin-bottom: 50px;
+    position: relative;
+    background: rgba(88, 100, 111, 0.4) url(/backgrounds/bPllUs-lines-transparent-picture.png);
+}
+
+.team-container p {
+    text-align: center;
+    font-size: 14px;
+}
+
+.team-container span {
+    transition: opacity 0.2s ease;
+    opacity: 0;
+}
+
+.team-container:hover span {
+    opacity: 1;
+}
+
+.team-container img {
+    transition: opacity 0.2s ease;
+    opacity: 1;
+}
+
+.team-container:hover img {
+    opacity: 0;
+}
+
+.team-logo {
+    position: absolute;
+    top: 35px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+}
+
+.team-player-card {
+    text-align: center;
+    font-size: 15px;
+}

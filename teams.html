@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/playerModal.css">
+    <link rel="stylesheet" href="css/teams.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="layout" data-sidebar>
         <aside>
@@ -22,7 +25,7 @@
         </aside>
     </div>
     <div class="whole-content">
-                <header class="header">
+        <header class="header">
             <div class="header__menu">
                 <button class="sidebar-menu-btn" type="button" data-toggle-sidebar><img class="sidebar-menu-btn-image"
                         src="icons-proect/interface-ui-menu-list-hamburger-svgrepo-com.svg" alt="">DOTASTUFF</button>
@@ -36,7 +39,8 @@
                     <li class="menu-list-icon"><a href="heroes.html" data-border="#d80000">Heroes</a></li>
                 </ul>
                 <div class="header__search">
-                    <input type="text" class="header__search-input" id="searchInput" placeholder="seach player nickname" data-search-input>
+                    <input type="text" class="header__search-input" id="searchInput" placeholder="seach player nickname"
+                        data-search-input>
                     <button class="header__search-btn" type="button" data-search-btn><img
                             class="header__search-btn-image" src="icons-proect/search-svgrepo-com.svg" alt=""></button>
                 </div>
@@ -44,15 +48,48 @@
 
         </header>
         <main>
-
-
+            <div class="overlay"></div>
+            <h1>The International 2025</h1>
+            <div class="content-block">
+                <div class="international-block">
+                    <div class="international-block-title">
+                        <img class="international-block-image" src="backgrounds/intLogo.png" alt="" width="250">
+                        <br>
+                        <h2>TI 2025</h2>
+                    </div>
+                    <div class="international-block-info">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Start Date</td>
+                                    <td>September 04</td>
+                                </tr>
+                                <tr>
+                                    <td>Prize Pool</td>
+                                    <td><b>$1,600,000</b></td>
+                                </tr>
+                                <tr>
+                                    <td>Series</td>
+                                    <td>The International</td>
+                                </tr>
+                                <tr>
+                                    <td>Location</td>
+                                    <td>Hamburg, Germany</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="teams-block" data-teams-container></div>
+            </div>
         </main>
     </div>
     <div class="modal-container modal-container-off" data-modal-container hidden>
-            <button class="modal-container-close-btn" data-close-modal-btn>❌</button>
-            <div class="playerModal" data-player-info-container></div>
-        </div>
+        <button class="modal-container-close-btn" data-close-modal-btn>❌</button>
+        <div class="playerModal" data-player-info-container></div>
+    </div>
     <script src="js/main.js" type="module"></script>
     <script src="js/getTeams.js"></script>
 </body>
+
 </html>
