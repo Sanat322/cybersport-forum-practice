@@ -3,21 +3,44 @@
 const params = new URLSearchParams(window.location.search);
 const heroName = params.get('name');
 
-async function loadHeroData() {
-    const [heroes, abilitiesDesc] = await Promise.all([
-        fetch('js/heroes-cleaned.json').then(r => r.json()),
-        fetch('js/abilities-with-desc.json').then(r => r.json())
-    ]);
-    return { heroes, abilitiesDesc };
-}
+const loadHeroPage = async () => {
+    try {
+        const [heroes, abilitiesDesc] = await Promise.all([
+            fetch('js/heroes-cleaned.json').then(r => r.json()),
 
-function renderHeroInfo(hero, container) {
-    const heroKey = hero.name.replace("npc_dota_hero_", "");
-    const renderUrl = `https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/${heroKey}.webm`;
-    const attackIcon = hero.attack_type === "Melee" ? "icons-proect/melee.svg" : "icons-proect/ranged.svg";
-    const customPath = `heroes-images/${hero.localized_name.replace(/\s+/g, "_")}_icon.webp`;
+            fetch('js/abilities-with-desc.json').then(r => r.json())
+        ]);
+        const heroContainer = document.querySelector(".hero-details");
+        const hero = heroes.find(h => h.localized_name === heroName);
+        const heroKey = hero.name.replace("npc_dota_hero_", "");
+        const heroAbilityIds = Object.keys(abilitiesDesc).filter(id => id.startsWith(heroKey));
+        const abilityContainer = document.createElement("div");
+        abilityContainer.classList.add("ability-container")
 
-    container.innerHTML = `<div class = "hero-page">
+        const heroVideoPreview = hero.name
+            .replace("npc_dota_hero_", "")
+            + ".webm";
+        const renderUrl = `https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/${heroVideoPreview}`
+        if (!hero) {
+            document.querySelector(".hero-details").innerText = "hero not found!"
+            return;
+        }
+        const heroAttackType = hero.attack_type;
+        const meleeAttackIcon = "icons-proect/melee.svg";
+        const rangedAttackIcon = "icons-proect/ranged.svg";
+        const attackIcon = heroAttackType === "Melee" ? meleeAttackIcon : rangedAttackIcon;
+        const attackTypeElement = document.createElement("img");
+        attackTypeElement.src = attackIcon;
+        attackTypeElement.classList.add("attack-type");
+        // иконка типа атаки
+
+        const formatedName = hero.localized_name.replace(/\s+/g, "_");
+        const customPath = `heroes-images/${formatedName}_icon.webp`;
+        // путь к мини-профилю персонажа
+
+        heroContainer.innerHTML =
+            `
+         <div class = "hero-page">
             <div class = "hero-preview-block">  
                 <div class = "hero-title">
                     <h2>${hero.localized_name}</h2>
@@ -104,78 +127,79 @@ function renderHeroInfo(hero, container) {
                         
                     </div>
                 </div>        
-         </div>`;
+         </div>
+         `;
+        const attackTypeLine = document.querySelector("#attackTypeLine");
+        attackTypeLine.append(attackTypeElement);
 
-    document.querySelector("#attackTypeLine").append(Object.assign(document.createElement("img"), {
-        src: attackIcon, className: "attack-type"
-    }));
+
+        const abilityIconsContainer = document.querySelector("[data-ability-icons]");
+        const abilityVideo = document.querySelector("[data-ability-video]");
+        let abilityVideoSource = document.querySelector("[data-ability-video-source]");
+        // слайдер с видео способностей
+
+        const abilityInfoIcon = document.querySelector("[data-ability-info-icon]");
+        let abilityInfoName = document.querySelector("[data-ability-info-name]");
+        let abilityInfoDesc = document.querySelector("[data-ability-desc]");
+        let abilityInfoManaCost = document.querySelector("[data-ability-info-manacost]");
+        let abilityInfoManaCooldown = document.querySelector("[data-ability-info-cooldown]");
+        let abilityInfoLore = document.querySelector("[data-ability-info-lore]");
+        let abilityInfoDamage = document.querySelector("[data-ability-damage]");
+        let abilityInfoAttrib = document.querySelector("[data-ability-info-attrib]");
+        // описание способностей 
+
+        heroAbilityIds.forEach(id => {
+            const data = abilitiesDesc[id] || {};
+
+            const shortName = id.replace(`${heroKey}_`, "").replace(/_/g, " ");
+            const abilityIconUrl = `https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/abilities/${id}.png`;
+            const abilityVideoUrl = `https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/abilities/${heroKey}/${id}.webm`;
+
+            const abilityButton = document.createElement("img");
+            abilityButton.src = abilityIconUrl;
+            abilityButton.alt = shortName;
+            abilityButton.classList.add("ability-icon-btn");
+            abilityButton.title = shortName;
+
+            abilityButton.addEventListener("click", () => {
+                abilityVideoSource.src = abilityVideoUrl;
+                abilityVideo.load();
+                abilityVideo.onerror = () => {
+                    abilityVideo.style.display = "none"; // или .src = ''
+                    console.warn("Видео не найдено:", abilityVideo.src);
+                };
+                abilityInfoName.textContent = shortName;
+                abilityInfoIcon.src = abilityIconUrl;
+                abilityInfoDesc.textContent = data.desc || "—";
+                abilityInfoManaCost.textContent = data.mc || "—";
+                abilityInfoManaCooldown.textContent = data.cd || "—";
+                abilityInfoLore.textContent = data.lore || "—";
+                abilityInfoDamage.textContent = data.dmg_type || "—";
+                
+                
+            })
+
+            abilityIconsContainer.appendChild(abilityButton);
+            if (abilityIconsContainer.firstChild) {
+                abilityIconsContainer.firstChild.click();
+            }
+        })
+        console.log("Hero key:", heroKey);
+    }
+    catch (error) {
+        console.error("произошла ошибка в процессе показа карточки героя!", error.message)
+    }
 }
 
-function renderAbilities(heroKey, heroAbilityIds, abilitiesDesc) {
-    const iconsContainer = document.querySelector("[data-ability-icons]");
-    const abilityVideo = document.querySelector("[data-ability-video]");
-    const videoSource = document.querySelector("[data-ability-video-source]");
-    const info = {
-        icon: document.querySelector("[data-ability-info-icon]"),
-        name: document.querySelector("[data-ability-info-name]"),
-        desc: document.querySelector("[data-ability-desc]"),
-        mc: document.querySelector("[data-ability-info-manacost]"),
-        cd: document.querySelector("[data-ability-info-cooldown]"),
-        lore: document.querySelector("[data-ability-info-lore]"),
-        dmg: document.querySelector("[data-ability-damage]")
-    };
-
-    heroAbilityIds.forEach(id => {
-        const data = abilitiesDesc[id];
-        const videoUrl = `https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/abilities/${heroKey}/${id}.webm`;
-
-        const button = document.createElement("img");
-        button.src = `https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/abilities/${id}.png`;
-        button.className = "ability-icon-btn";
-        button.alt = id;
-        button.title = id;
-
-        button.addEventListener("click", () => {
-            // Отображение видео
-            videoSource.src = videoUrl;
-            abilityVideo.load();
-            abilityVideo.onerror = () => {
-                abilityVideo.style.display = "none";
-                console.warn("Видео не найдено:", videoUrl);
-            };
-
-            // Отображение информации
-            info.icon.src = button.src;
-            info.name.textContent = id.replace(`${heroKey}_`, "").replace(/_/g, " ");
-            info.desc.textContent = data?.desc || "—";
-            info.mc.textContent = data?.mc || "—";
-            info.cd.textContent = data?.cd || "—";
-            info.lore.textContent = data?.lore || "—";
-            info.dmg.textContent = data?.dmg_type || "—";
-        });
-
-        iconsContainer.appendChild(button);
-    });
-
-    if (iconsContainer.firstChild) iconsContainer.firstChild.click();
-}
-
-const loadHeroPage = async () => {
+const checkVideoExists = async (url) => {
     try {
-        const { heroes, abilitiesDesc } = await loadHeroData();
-        const hero = heroes.find(h => h.localized_name === heroName);
-        if (!hero) return document.querySelector(".hero-details").innerText = "Hero not found!";
-
-        const heroKey = hero.name.replace("npc_dota_hero_", "");
-        const abilityIds = Object.keys(abilitiesDesc).filter(id => id.startsWith(heroKey));
-
-        const container = document.querySelector(".hero-details");
-        renderHeroInfo(hero, container);
-        renderAbilities(heroKey, abilityIds, abilitiesDesc);
-
-    } catch (err) {
-        console.error("Ошибка при загрузке героя:", err.message);
+        const response = await fetch(url, { method: 'HEAD' });
+        return response.ok;
+    } catch (error) {
+        return false;
     }
 };
+
+
 
 loadHeroPage();
