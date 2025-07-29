@@ -74,7 +74,7 @@ tr {
 
 .international-block {
     display: block;
-    /* background-image: url('/backgrounds/bPllUs-lines-transparent-picture.png'); */
+    background: rgba(88, 100, 111, 0.4) url(/backgrounds/spoiler.png);
     max-height: fit-content;
     background-color: #38434d;
 }
@@ -102,7 +102,7 @@ tr {
     height: 150px;
     margin-bottom: 50px;
     position: relative;
-    background: rgba(88, 100, 111, 0.4) url(/backgrounds/bPllUs-lines-transparent-picture.png);
+    background: rgba(88, 100, 111, 0.4) url(/backgrounds/spoiler.png) repeat scroll 0 0;
 }
 
 .team-container p {

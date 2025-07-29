@@ -1,0 +1,76 @@
+.team-wrapper {
+    max-width: 70%;
+    margin: 0 auto;
+    background-color: #2e3338;
+}
+.team-container{
+        padding: 50px 0 0 50px;
+
+}
+
+.team-page {
+    width: 27%;
+    text-align: center;
+    padding: 20px;
+    background:
+        url("/backgrounds/spoiler.png") repeat,
+        url("/backgrounds/pava.png") no-repeat center/cover,
+        rgba(59, 70, 80, 1);
+    box-shadow: 2px 2px 4px rgba(0,0,0, 0.3);
+    border: 1px solid rgb(68, 82, 95);
+    margin-bottom:  6.25rem;
+    
+}
+
+.team-table th {
+    border-bottom: 1px solid #424d56;
+}
+
+.team-table td {
+    border-bottom: 1px solid #424d56;
+}
+
+.team-table {
+    padding-left: 3.125rem;
+}
+
+.players-list {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 5rem;
+    
+}
+
+.player-info {
+    text-align: center;
+    padding: 0;
+    background: rgba(88, 100, 111, 0.4) url(/backgrounds/spoiler.png);
+}
+
+.matches-list{
+    width: 100%;
+    height: 100%;
+    background: url(/backgrounds/section_bg_1.jpg) repeat 50% 50%;;
+}
+
+.match-card{
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+.match-card-body.lose .team{
+    color: #ef4c47;
+}
+.match-card-body.lose .opposing-team{
+    color: #6fbd4b;
+}
+.match-card-body.win .team{
+    color: #6fbd4b;
+}
+.match-card-body.win .opposing-team{
+    color: #ef4c47;
+}
+.match-cad-result{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}

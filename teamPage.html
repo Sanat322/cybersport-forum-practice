@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/playerModal.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="layout" data-sidebar>
+        <aside>
+            <nav>
+                <ul class="layout-list">
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="teams.html">Teams</a></li>
+                    <li><a href="heroes.html">Heroes</a></li>
+                    <li><a href="items.html">Items</a></li>
+                    <link rel="stylesheet" href="css/teamPage.css">
+                </ul>
+            </nav>
+        </aside>
+    </div>
+    <div class="whole-content">
+        <header class="header">
+            <div class="header__menu">
+                <button class="sidebar-menu-btn" type="button" data-toggle-sidebar><img class="sidebar-menu-btn-image"
+                        src="icons-proect/interface-ui-menu-list-hamburger-svgrepo-com.svg" alt="">DOTASTUFF</button>
+                <ul class="menu-list">
+                    <li class="menu-list-icon"><a href="" class="menu-list-icon-link" data-border="#166dca"><img
+                                src="icons-proect/steam-svgrepo-com (1).svg" alt=""
+                                class="menu-list-icon-image">Войти</a>
+                    </li>
+                    <li class="menu-list-icon"><a href="main.html" data-border="#3e0b77">Home</a></li>
+                    <li class="menu-list-icon"><a href="standings.html" data-border="#88f4f8">Teams Standings</a></li>
+                    <li class="menu-list-icon"><a href="heroes.html" data-border="#d80000">Heroes</a></li>
+                </ul>
+                <div class="header__search">
+                    <input type="text" class="header__search-input" id="searchInput" placeholder="seach player nickname"
+                        data-search-input>
+                    <button class="header__search-btn" type="button" data-search-btn><img
+                            class="header__search-btn-image" src="icons-proect/search-svgrepo-com.svg" alt=""></button>
+                </div>
+            </div>
+
+        </header>
+        <main>
+            <div class="team-wrapper">
+                <div class="team-container" data-team-container></div>
+                <div class="players-list" data-players-list></div>
+                <div class="matches-list" data-matches-list></div>
+            </div>
+        </main>
+    </div>
+    <div class="modal-container modal-container-off" data-modal-container hidden>
+        <button class="modal-container-close-btn" data-close-modal-btn>❌</button>
+        <div class="playerModal" data-player-info-container></div>
+    </div>
+    <!-- <script src="js/getTeams.js"></script> -->
+    <script src="js/main.js" type="module"></script>
+    <script src="js/teamPage.js"></script>
+</body>
+
+</html>
