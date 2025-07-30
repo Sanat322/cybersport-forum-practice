@@ -3,10 +3,11 @@
 export const showModal = (player) => {
     const playersContainer = document.querySelector("[data-player-info-container]");
     const modalContainer = document.querySelector("[data-modal-container]");
+    const proPlayerImgPath = `./player-avatars/${player.name.toLowerCase()}.png`
     playersContainer.innerHTML =
         `
     <div class = "player-card">
-        <img class="player-card-avatar" src="${player.avatarfull}" onerror="this.src='./icons-proect/steam-svgrepo-com (1).svg'">
+        <img class="player-card-avatar" src="${proPlayerImgPath}" onerror="this.src='./icons-proect/steam-svgrepo-com (1).svg'">
         <div class = "player-card-info">
             <h2>${player.name}</h2>
             <p>team: ${player.team_name}</p>

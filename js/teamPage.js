@@ -2,7 +2,8 @@
 
 const params = new URLSearchParams(window.location.search);
 const teamName = params.get('name');
-
+const modal = document.querySelector(".match-modal");
+const closeBtn = document.querySelector(".modal-content-close");
 const getTeamInfo = async () => {
     const [teams, players] = await Promise.all([
         fetch('https://api.opendota.com/api/teams').then(r => r.json()),
@@ -119,17 +120,15 @@ const renderTeamMatches = async (teamName, id, container) => {
         matchWrapper.classList.add("match-wrapper");
 
         matchWrapper.innerHTML = `
-        <div class = "match-card">
+        <div class = "match-card" data-match-id="${match_id}">
             <div class = "match-card-header">
                 ${teamWin ? "Victory" : "Defeat"} — ${league_name} (${matchDate})
             </div>
             <div class = "match-card-body ${teamWin ? "win" : "lose"}">
                 <div class = "match-card-info">
-                <div class = "match-cad-result">
-                    <p class = "team">${teamName}</p> <p>${teamScore} - ${oponentScore}</p> <p class = "opposing-team">${opposing_team_name}</p>
-                </div>
-                    
-                    
+                    <div class = "match-cad-result">
+                        <p class = "team">${teamName}</p> <p>${teamScore} - ${oponentScore}</p> <p class = "opposing-team">${opposing_team_name}</p>
+                    </div>
                     <p>Duration: ${matchDuration}</p>
                 </div>
             </div>
@@ -137,8 +136,163 @@ const renderTeamMatches = async (teamName, id, container) => {
 
         `
         container.appendChild(matchWrapper);
+
+        const card = matchWrapper.querySelector(".match-card");
+        card.addEventListener("click", async () => {
+            const matchId = card.dataset.matchId;
+            const res = await fetch(`https://api.opendota.com/api/matches/${matchId}`);
+            const matchData = await res.json();
+            showMatchModal(matchData);
+        })
     })
 
+}
+
+const showMatchModal = async (matchData) => {
+    const modalBody = document.querySelector("[data-modal-body]");
+    const { heroes, items } = await loadPlayerMatchData();
+    const heroesMap = {};
+    const itemsMap = {};
+    heroes.forEach(hero => {
+        heroesMap[hero.id] = hero.name.replace("npc_dota_hero_", "");
+    })
+    items.forEach(item => {
+        itemsMap[item.id] = item.name.replace("/\s+/g", "_").toLowerCase();
+    })
+    const {
+        radiant_score,
+        dire_score,
+        radiant_name,
+        dire_name,
+        duration,
+        start_time,
+        radiant_win,
+
+    } = matchData;
+
+    const winner = radiant_win ? radiant_name || "Radiant" : dire_name || "Dire";
+    const matchTime = new Date(start_time * 1000).toLocaleDateString();
+    const matchDuration = `${Math.floor(duration / 60)}:${(duration % 60).toString().padStart(2, "0")}`;
+
+    modalBody.innerHTML = `
+        <span>${winner}🏆</span>
+        <h3>${radiant_name}-${radiant_score}</h3>
+        <div class = "team radiant-team"></div>
+        <h3>${dire_name}-${dire_score}</h3>
+        <div class = "team dire-team"></div>
+
+    `;
+
+    const radiantTeamContainer = document.querySelector(".radiant-team");
+    const direTeamContainer = document.querySelector(".dire-team");
+
+
+    const modalHeader = document.querySelector("[data-modal-header]");
+
+    modalHeader.innerHTML = `
+        <div class = "modal-score">
+            <thead>
+            <tr>
+                <th>Net Worth</th>
+                <th>LH/DN</th>
+                <th>GPM</th>
+                <th>XPM</th>
+                <th>Hero Dmg</th>
+                <th>Heal</th>
+                <th>Tower Dmg</th>
+            </tr>
+        </thead>
+        </div>
+        `
+
+
+    matchData.players.forEach(player => {
+        const heroId = player.hero_id;
+        const kills = player.kills;
+        const playerName = player.name;
+        const deaths = player.deaths;
+        const assists = player.assists;
+        const slot = player.player_slot;
+        const netWorth = player.net_worth;
+        const lh = player.last_hits;
+        const dn = player.denies;
+        const goldPerMin = player.gold_per_min;
+        const xpPerMin = player.xp_per_min;
+        const heroDamage = player.hero_damage;
+        const towerDamage = player.tower_damage;
+        const heroHealing = player.hero_healing;
+        const level = player.level;
+        const lane = player.lane; 
+        const isRoaming = player.is_roaming;
+        let role = "Unknown";
+        if (lane === 1) role = "Safe lane";
+        else if (lane === 2) role = "Mid";
+        else if (lane === 3) role = "Offlane";
+        else if (isRoaming) role = "Roamer";
+        const itemsList = [
+            player.item_0, player.item_1, player.item_2,
+            player.item_3, player.item_4, player.item_5
+        ];
+        const playerRow = document.createElement("div");
+        playerRow.classList.add("match-player");
+        const itemImagesHTML = itemsList
+            .map(id => {
+                const itemName = itemsMap[id];
+                if (!itemName) return '';
+                return `<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/${itemName}_lg.png" alt="${itemName}" width="20">`;
+            })
+            .join("");
+        const heroName = heroesMap[heroId];
+        const heroImagePath = `./heroes-images/${heroName}_icon.webp`;
+        playerRow.innerHTML = `
+        <div class="player-stats">
+            <div class="player-card-mini">
+                <img src="${heroImagePath}" width="50" height="20" />
+                <span>${playerName}</span>
+                <span>${level} ${heroName}, ${role}</span>
+            </div>
+            
+            <div class="items">${itemImagesHTML}</div>
+            <div class = "player-stats-block">
+            <p class = "KDA">K/D/A: ${kills}/${deaths}/${assists}</p>
+                <table class="player-stats-table">
+                    <tbody>
+                        <tr>
+                            <td>${netWorth}</td>
+                            <td>${lh}/${dn}</td>
+                            <td>${goldPerMin}</td>
+                            <td>${xpPerMin}</td>
+                            <td>${heroDamage}</td>
+                            <td>${heroHealing}</td>
+                            <td>${towerDamage}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+        `
+        if (slot < 128) {
+            radiantTeamContainer.appendChild(playerRow);
+        }
+        else {
+            direTeamContainer.appendChild(playerRow);
+        }
+    })
+    document.querySelector(".match-modal").hidden = false;
+}
+closeBtn.onclick = () => modal.hidden = true;
+
+window.onclick = (e) => {
+    if (e.target === modal) modal.hidden = true;
+};
+
+
+async function loadPlayerMatchData() {
+    const [heroes, items] = await Promise.all([
+        fetch('js/heroes-cleaned.json').then(r => r.json()),
+        fetch('js/items.json').then(r => r.json())
+    ]);
+    return { heroes, items };
 }
 
 const loadTeamPage = async () => {

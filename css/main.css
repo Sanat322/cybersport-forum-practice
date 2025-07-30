@@ -1,5 +1,5 @@
 body {
-    background-color: #1c252e;
+    background-color: #111111;
     color: #fefeff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -31,7 +31,9 @@ button {
 }
 
 header {
-    background-color: #252f39;
+    background: url(/backgrounds/pava.png);
+    background-color: rgb(66, 86, 105);
+    background-position: center;
     align-items: center;
     display: flex;
     margin: 0;
@@ -61,8 +63,8 @@ header {
 }
 
 .menu-list-icon-image {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .menu-list-icon-link {
@@ -158,9 +160,11 @@ header {
     padding: 0;
     transform: translateX(0);
 }
-.layout.open ~ .whole-content {
-  margin-left: 125px;
+
+.layout.open~.whole-content {
+    margin-left: 125px;
 }
+
 .layout-list {
     padding-top: 40px;
 }
@@ -168,12 +172,17 @@ header {
 .whole-content {
     margin-left: 0;
     transition: margin-left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .main-content {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    width: 80%;
+    margin: 0 auto;
+    background: url(/backgrounds/section_bg_1.jpg);
 }
 
 .news-block {
@@ -214,34 +223,34 @@ header {
 }
 
 .news-item-title {
-    color: aqua;
+    color: rgb(189, 205, 205);
 }
 
-.news__item:nth-child(odd) {
+.news__item {
     background-color: #252e35;
 }
 
-.news__item:nth-child(even) {
-    background-color: #202932;
+.news__item {
+    background-color: #363b40;
 }
 
 .league-block {
-    padding-top: 100px;
+    padding: 100px 0 0 100px;
     flex-direction: row;
     flex-wrap: wrap;
     width: 420px;
     /* margin: 0 auto; */
-    background-color: #1c252e;
+    /* background-color: #1c252e; */
     justify-content: center;
     /* gap: 10px; */
 }
 
 .league-card {
-    width: 400px;
+    width: 300px;
     height: 160px;
     padding: 20px;
     border-radius: 12px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .league-card:hover {
@@ -265,3 +274,14 @@ header {
     width: 160px;
     object-fit: contain;
 }
+
+footer {
+    width: 80%;
+    background: #4b535a url(/backgrounds/spoiler.png) repeat;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
