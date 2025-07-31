@@ -157,7 +157,7 @@ const showMatchModal = async (matchData) => {
         heroesMap[hero.id] = hero.name.replace("npc_dota_hero_", "");
     })
     items.forEach(item => {
-        itemsMap[item.id] = item.name.replace("/\s+/g", "_").toLowerCase();
+        itemsMap[item.id] = item.name.replace("item_", "").toLowerCase();
     })
     const {
         radiant_score,
@@ -222,7 +222,7 @@ const showMatchModal = async (matchData) => {
         const towerDamage = player.tower_damage;
         const heroHealing = player.hero_healing;
         const level = player.level;
-        const lane = player.lane; 
+        const lane = player.lane;
         const isRoaming = player.is_roaming;
         let role = "Unknown";
         if (lane === 1) role = "Safe lane";
@@ -238,38 +238,36 @@ const showMatchModal = async (matchData) => {
         const itemImagesHTML = itemsList
             .map(id => {
                 const itemName = itemsMap[id];
+
                 if (!itemName) return '';
+
                 return `<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/${itemName}_lg.png" alt="${itemName}" width="20">`;
+
             })
             .join("");
+
         const heroName = heroesMap[heroId];
         const heroImagePath = `./heroes-images/${heroName}_icon.webp`;
         playerRow.innerHTML = `
-        <div class="player-stats">
-            <div class="player-card-mini">
-                <img src="${heroImagePath}" width="50" height="20" />
-                <span>${playerName}</span>
-                <span>${level} ${heroName}, ${role}</span>
-            </div>
-            
-            <div class="items">${itemImagesHTML}</div>
-            <div class = "player-stats-block">
-            <p class = "KDA">K/D/A: ${kills}/${deaths}/${assists}</p>
-                <table class="player-stats-table">
-                    <tbody>
-                        <tr>
-                            <td>${netWorth}</td>
-                            <td>${lh}/${dn}</td>
-                            <td>${goldPerMin}</td>
-                            <td>${xpPerMin}</td>
-                            <td>${heroDamage}</td>
-                            <td>${heroHealing}</td>
-                            <td>${towerDamage}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div> 
+        <table class="full-player-stats-table">
+    
+    <tbody>
+        <tr>
+            <td class="td-player-hero"><img src="${heroImagePath}" width="50" height="30" alt="${heroName}"></td>
+            <td class="td-player-name">${playerName}</td>
+            <td class="td-player-info">${level} ${heroName}, ${role}</td>
+            <td class="td-player-items">${itemImagesHTML}</td>
+            <td class="td-player-kda">${kills}/${deaths}/${assists}</td>
+            <td class="td-player-networth">${netWorth}</td>
+            <td class="td-player-lhdn">${lh}/${dn}</td>
+            <td class="td-player-gpm">${goldPerMin}</td>
+            <td class="td-player-xpm">${xpPerMin}</td>
+            <td class="td-player-damage">${heroDamage}</td>
+            <td class="td-player-heal">${heroHealing}</td>
+            <td class="td-player-tower">${towerDamage}</td>
+        </tr>
+    </tbody>
+</table>
         `
         if (slot < 128) {
             radiantTeamContainer.appendChild(playerRow);
@@ -277,8 +275,10 @@ const showMatchModal = async (matchData) => {
         else {
             direTeamContainer.appendChild(playerRow);
         }
+
     })
     document.querySelector(".match-modal").hidden = false;
+
 }
 closeBtn.onclick = () => modal.hidden = true;
 
@@ -290,7 +290,7 @@ window.onclick = (e) => {
 async function loadPlayerMatchData() {
     const [heroes, items] = await Promise.all([
         fetch('js/heroes-cleaned.json').then(r => r.json()),
-        fetch('js/items.json').then(r => r.json())
+        fetch('js/items-id.json').then(r => r.json())
     ]);
     return { heroes, items };
 }

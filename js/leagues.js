@@ -1,67 +1,57 @@
 'use strict'
-const leaguesInfoContainer = document.querySelector("[data-league-info]");
-const selectedLeagueTier = document.querySelector("#tier-filter");
-const countLeagueSelected = document.querySelector("#league-count");
-const leagueIds = new Set();
-const customBanners = {
-    18043: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGigbtEqtXcMEoI1JNiG0IlGgmCEuw38GtTjQHw47_ZG6jEkhoCdjYcSDP1E6pksFhBiw&usqp=CAU",
-    17233: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgORk4jKFguSqMH4YxnrXWz9t_Udro2e89vw&s",
-    17381: "https://d3dwep9z8m8y9r.cloudfront.net/publications/2023/11/publications-10593/preview/43013/Site_548x400.png",
-    17659: "https://escharts.com/metaImage/tournaments/epl-world-series-southeast-asia-season-4?social=twitter&v=1750688718",
-    17914: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4JUuyCQr53_r4D0obLSyJ7ps3OGbwxJi2ig&s",
-    18409: "https://pbs.twimg.com/media/Gufo9MLW4AAbaML.jpg",
-    18433: "https://static.gosugamers.net/1c/39/fe/badc284597f4143143e79f6970db581645eca94796460b572ea86b2c98.webp",
-    18396: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQba1Nh0DhuepnwIYE4bZcwtsx-zB7j8uXdzw&s",
-    17211: "https://sun9-17.userapi.com/impf/Q9xOGFr1J3RVhHcOwsNrMSgJLYxDyWeKe_0cBg/vwAisX9V9RI.jpg?size=1818x606&quality=95&crop=0,129,1710,570&sign=3381c955f2525f38b92341b4eb649237&type=cover_group",
-}
-const getActiveTournaments = async () => {
+const liveMatchContainer = document.querySelector("[data-live-matches]");
+const proTeams = ["Team Spirit", "Gaimin Gladiators", "Team Liquid",
+    "Tundra Esports", "BB Team", "Xtreme Gaming", "Nigma Galaxy", "Team Falcons", "PVISION", "Aurora Gaming", "BOOM Esports", "Team Tidebound", "HEROIC", "Team Nemesis", "NAVI Junior", "OG", "LGD Gaming", "Team Secret"];
+
+const getLiveTournaments = async () => {
     try {
-        const response = await fetch("https://api.opendota.com/api/proMatches");
-        const matches = await response.json();
-        matches.forEach((match) => {
-            if (match.leagueid) {
-                leagueIds.add(match.leagueid)
-            }
+        const response = await fetch("https://api.opendota.com/api/live");
+        const liveMatches = await response.json();
+        const proMatches = liveMatches.filter(match =>
+            proTeams.includes(match.team_name_radiant) ||
+            proTeams.includes(match.team_name_dire)
+        )
+        .slice(0, 3);
+
+        proMatches.forEach(proMatch => {
+            const matchId = proMatch.match_id;
+            const radiantTeam = proMatch.team_name_radiant;
+            const direTeam = proMatch.team_name_dire;
+            const leagueid = proMatch.league_id;
+
+            const liveLeagueName = await getLeagueName(leagueid);
+            const direScore = proMatch.dire_score;
+            const radiantScore = proMatch.radiant_score;
+            const matchCard = document.createElement("div");
+            matchCard.classList.add("match-card");
+            const radiantLogo = `./team-logos/${radiantTeam.replace(/\s+/g, "_")}.png`;
+            const direLogo = `./team-logos/${direTeam.replace(/\s+/g, "_")}.png`;
+            matchCard.innerHTML =`
+            <div class ="radiant-team">
+                <img src = "${radiantLogo}" width = 40 / onerror="this.onerror=null;this.src='./team-logos/Dota-2-Logo.png';">
+                <p>${radiantTeam}</p>
+            </div>
+            <span>${radiantScore} - ${direScore}</span>
+            <div class ="dire-team">
+                <img src = "${direLogo}" width = 40 / onerror="this.onerror=null;this.src='./team-logos/Dota-2-Logo.png';">
+                <p>${direTeam}</p>
+            </div>
+            `
+            liveMatchContainer.appendChild(matchCard);
         });
-        const leaguesRes = await fetch("https://api.opendota.com/api/leagues");
-        const allLeagues = await leaguesRes.json();
-
-        const activeLeagues = allLeagues
-            .filter(league => leagueIds.has(league.leagueid))
-            .filter(league => league.name && league.tier)
-            .slice(0, 5)
-
-        console.log(activeLeagues);
-        renderLeagueCard(activeLeagues);
+        
     }
     catch (error) {
         console.error("поймана ошибка", error.message)
     }
 }
-const renderLeagueCard = (leagues) => {
-    leaguesInfoContainer.innerHTML = "";
-    leagues
-        .filter(league => league.name && league.tier)
-        .slice(0, 5)
-        .forEach((league) => {
-            const bannerUrl = league.banner || customBanners[league.leagueid] || "";
-            leaguesInfoContainer.insertAdjacentHTML("beforeend",
-                `
-            <div class = "league-card" style= "background-image:url(${bannerUrl}); background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  ">
-                <p class="league-card-tier">🔴 Активный турнир, tier ${league.tier}</p>
-                
-            </div>
-            `
-            )
-            // console.log(league.name && league.leagueid);
-        }
 
-        )
-
-}
+const getLeagueName = async (leagueId) =>{
+    const res = await fetch(`https://api.opendota.com/api/leagues/${leagueId}`);
+    const data = await res.json();
+    const leagueName = data.league_name;
+    return leagueName;
+} 
 
 
-getActiveTournaments();
+getLiveTournaments();
