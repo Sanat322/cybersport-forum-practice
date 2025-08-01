@@ -250,24 +250,24 @@ const showMatchModal = async (matchData) => {
         const heroImagePath = `./heroes-images/${heroName}_icon.webp`;
         playerRow.innerHTML = `
         <table class="full-player-stats-table">
-    
-    <tbody>
-        <tr>
-            <td class="td-player-hero"><img src="${heroImagePath}" width="50" height="30" alt="${heroName}"></td>
-            <td class="td-player-name">${playerName}</td>
-            <td class="td-player-info">${level} ${heroName}, ${role}</td>
-            <td class="td-player-items">${itemImagesHTML}</td>
-            <td class="td-player-kda">${kills}/${deaths}/${assists}</td>
-            <td class="td-player-networth">${netWorth}</td>
-            <td class="td-player-lhdn">${lh}/${dn}</td>
-            <td class="td-player-gpm">${goldPerMin}</td>
-            <td class="td-player-xpm">${xpPerMin}</td>
-            <td class="td-player-damage">${heroDamage}</td>
-            <td class="td-player-heal">${heroHealing}</td>
-            <td class="td-player-tower">${towerDamage}</td>
-        </tr>
-    </tbody>
-</table>
+            
+            <tbody>
+                <tr>
+                    <td class="td-player-hero"><img src="${heroImagePath}" width="50" height="30" alt="${heroName}"></td>
+                    <td class="td-player-name">${playerName}</td>
+                    <td class="td-player-info">${level} ${heroName}, ${role}</td>
+                    <td class="td-player-items">${itemImagesHTML}</td>
+                    <td class="td-player-kda">${kills}/${deaths}/${assists}</td>
+                    <td class="td-player-networth">${netWorth}</td>
+                    <td class="td-player-lhdn">${lh}/${dn}</td>
+                    <td class="td-player-gpm">${goldPerMin}</td>
+                    <td class="td-player-xpm">${xpPerMin}</td>
+                    <td class="td-player-damage">${heroDamage}</td>
+                    <td class="td-player-heal">${heroHealing}</td>
+                    <td class="td-player-tower">${towerDamage}</td>
+                </tr>
+            </tbody>
+        </table>
         `
         if (slot < 128) {
             radiantTeamContainer.appendChild(playerRow);

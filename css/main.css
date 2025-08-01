@@ -285,3 +285,35 @@ footer {
     align-items: center;
 }
 
+.match-card{
+    width: 25rem;
+}
+.match-card-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 50%; */
+}
+.match-card h2{
+    font-size: 20px;
+}
+.radiant-team{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+}
+
+.dire-team{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+}
+
+.match-card-team-image{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.match-card-team-title{
+    font-size: 12px;
+}

@@ -17,7 +17,7 @@ async function loadTeams() {
            return`
             <tr>
         <td><img src="${teamLogo}" width="50" height="40"></td>
-        <td>${team.name}</td>
+        <td><a href = "teamPage.html?name=${encodeURIComponent(team.name)}">${team.name}</a></td>
         <td>${team.wins}</td>
         <td>${team.losses}</td>
         <td>${team.rating?.toFixed(1) ?? "—"}</td>
