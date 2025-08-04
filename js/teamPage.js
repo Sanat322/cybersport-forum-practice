@@ -173,37 +173,55 @@ const showMatchModal = async (matchData) => {
     const winner = radiant_win ? radiant_name || "Radiant" : dire_name || "Dire";
     const matchTime = new Date(start_time * 1000).toLocaleDateString();
     const matchDuration = `${Math.floor(duration / 60)}:${(duration % 60).toString().padStart(2, "0")}`;
-
+    
+    modalBody.innerHTML = "";
     modalBody.innerHTML = `
-        <span>${winner}🏆</span>
-        <h3>${radiant_name}-${radiant_score}</h3>
-        <div class = "team radiant-team"></div>
-        <h3>${dire_name}-${dire_score}</h3>
-        <div class = "team dire-team"></div>
-
-    `;
-
-    const radiantTeamContainer = document.querySelector(".radiant-team");
-    const direTeamContainer = document.querySelector(".dire-team");
-
-
-    const modalHeader = document.querySelector("[data-modal-header]");
-
-    modalHeader.innerHTML = `
-        <div class = "modal-score">
-            <thead>
+    <span>${winner}🏆</span>
+    <span>${matchDuration}</span>
+    <h3>${radiant_name}-${radiant_score}</h3>
+    <table class="team-table">
+        <thead>
             <tr>
-                <th>Net Worth</th>
+                <th>Hero</th>
+                <th>Player</th>
+                <th>Info</th>
+                <th>Items</th>
+                <th>K/D/A</th>
+                <th>Net</th>
                 <th>LH/DN</th>
                 <th>GPM</th>
                 <th>XPM</th>
-                <th>Hero Dmg</th>
+                <th>Dmg</th>
                 <th>Heal</th>
-                <th>Tower Dmg</th>
+                <th>Tower</th>
             </tr>
         </thead>
-        </div>
+        <tbody class="radiant-team"></tbody>
+    </table>
+
+    <h3 style = "color: #a1303a">${dire_name}-${dire_score}</h3>
+    <table class="team-table">
+        <thead>
+            <tr>
+                <th>Hero</th>
+                <th>Player</th>
+                <th>Info</th>
+                <th>Items</th>
+                <th>K/D/A</th>
+                <th>Net</th>
+                <th>LH/DN</th>
+                <th>GPM</th>
+                <th>XPM</th>
+                <th>Dmg</th>
+                <th>Heal</th>
+                <th>Tower</th>
+            </tr>
+        </thead>
+        <tbody class="dire-team"></tbody>
+    </table>
         `
+    const radiantTeamContainer = document.querySelector(".radiant-team");
+    const direTeamContainer = document.querySelector(".dire-team");
 
 
     matchData.players.forEach(player => {
@@ -233,7 +251,7 @@ const showMatchModal = async (matchData) => {
             player.item_0, player.item_1, player.item_2,
             player.item_3, player.item_4, player.item_5
         ];
-        const playerRow = document.createElement("div");
+        const playerRow = document.createElement("tr");
         playerRow.classList.add("match-player");
         const itemImagesHTML = itemsList
             .map(id => {
@@ -247,27 +265,21 @@ const showMatchModal = async (matchData) => {
             .join("");
 
         const heroName = heroesMap[heroId];
+        console.log(player)
         const heroImagePath = `./heroes-images/${heroName}_icon.webp`;
         playerRow.innerHTML = `
-        <table class="full-player-stats-table">
-            
-            <tbody>
-                <tr>
-                    <td class="td-player-hero"><img src="${heroImagePath}" width="50" height="30" alt="${heroName}"></td>
-                    <td class="td-player-name">${playerName}</td>
-                    <td class="td-player-info">${level} ${heroName}, ${role}</td>
-                    <td class="td-player-items">${itemImagesHTML}</td>
-                    <td class="td-player-kda">${kills}/${deaths}/${assists}</td>
-                    <td class="td-player-networth">${netWorth}</td>
-                    <td class="td-player-lhdn">${lh}/${dn}</td>
-                    <td class="td-player-gpm">${goldPerMin}</td>
-                    <td class="td-player-xpm">${xpPerMin}</td>
-                    <td class="td-player-damage">${heroDamage}</td>
-                    <td class="td-player-heal">${heroHealing}</td>
-                    <td class="td-player-tower">${towerDamage}</td>
-                </tr>
-            </tbody>
-        </table>
+        <td><img src="${heroImagePath}" width="50"></td>
+        <td>${playerName}</td>
+        <td>${level} ${heroName}, ${role}</td>
+        <td>${itemImagesHTML}</td>
+        <td>${kills}/${deaths}/${assists}</td>
+        <td>${netWorth}</td>
+        <td>${lh}/${dn}</td>
+        <td>${goldPerMin}</td>
+        <td>${xpPerMin}</td>
+        <td>${heroDamage}</td>
+        <td>${heroHealing}</td>
+        <td>${towerDamage}</td>
         `
         if (slot < 128) {
             radiantTeamContainer.appendChild(playerRow);

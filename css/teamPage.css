@@ -65,6 +65,7 @@
     text-align: center;
     transition: 0.3s ease;
     cursor: pointer;
+    width: 100%;
 }
 
 .match-card:hover{
@@ -109,63 +110,32 @@
     margin: 0 auto;
 }
 .modal-content-close{
-    float: right;
+    float: right;    
     font-size: 20px;
-
 }
 .match-player{
     padding: 10px;
 }
-.player-stats{
-    display: flex;
-    align-items: center;
-    
-}
-.player-stats-block{
-    display: flex; 
-    justify-content: space-between;
-    gap: 100px;
-}
-.KDA{
-    /* margin-right: 150px; */
-    width: 6.25rem;
-}
-.player-card-mini{
-    display: flex;
-    width: 300px;
-    gap: 5px;
-    /* margin-right: 100px; */
-}
+
 .modal-score{
     float: right;
     font-size: 12px;
     padding-right: 22px;
 }
-.player-stats-table td {
-    /* border: 1px solid #444; */
-    padding: 4px 8px;
-    text-align: center;
-}
-.items{
-    margin: 0 40px 0 0;
+
+.team-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
 }
 
-.td-player-hero{
-    width: 50px;
+.team-table th,
+.team-table td {
+    padding: 6px 10px;
+    text-align: center;
+    border: 1px solid #444;
 }
-.td-player-name{
-    width: 50px;
-}
-.td-player-info{
-    width: 100px;
-}
-.td-player-items{
-    width: 120px;
-}
-.td-player-kda{
-    width: 100px;
-    
-}
-.td-player-networth{
-    padding-left: 130px;
+
+.team-table img {
+    vertical-align: middle;
 }

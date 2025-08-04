@@ -234,46 +234,6 @@ header {
     background-color: #363b40;
 }
 
-.league-block {
-    padding: 100px 0 0 100px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 420px;
-    /* margin: 0 auto; */
-    /* background-color: #1c252e; */
-    justify-content: center;
-    /* gap: 10px; */
-}
-
-.league-card {
-    width: 300px;
-    height: 160px;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 30px;
-}
-
-.league-card:hover {
-    filter: brightness(80%);
-}
-
-.league-card h2,
-.league-card p {
-    position: relative;
-    top: 140px;
-}
-
-
-.league-card:hover h2,
-.league-card:hover p {
-    color: aqua;
-}
-
-.league-card-banner-image {
-    height: 80px;
-    width: 160px;
-    object-fit: contain;
-}
 
 footer {
     width: 80%;
@@ -285,6 +245,10 @@ footer {
     align-items: center;
 }
 
+.live-match-block{
+    padding: 100px 0 0 100px;
+}
+
 .match-card{
     width: 25rem;
 }
@@ -293,6 +257,9 @@ footer {
     justify-content: center;
     align-items: center;
     /* width: 50%; */
+}
+.match-card:hover{
+    background-color: rgba(115, 125, 133, 0.5);
 }
 .match-card h2{
     font-size: 20px;
@@ -316,4 +283,30 @@ footer {
 }
 .match-card-team-title{
     font-size: 12px;
+}
+
+.match-modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 5.75rem;
+    width: 100vw;
+    height: 100vh;
+}
+
+.live-match-details{
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #1e1e1e;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.match-modal-container-close-btn{
+   /* float: right; */
+   
 }

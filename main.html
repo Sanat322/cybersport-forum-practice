@@ -29,8 +29,8 @@
                 <button class="sidebar-menu-btn" type="button" data-toggle-sidebar><img class="sidebar-menu-btn-image"
                         src="icons-proect/interface-ui-menu-list-hamburger-svgrepo-com.svg" alt="">DOTASTUFF</button>
                 <ul class="menu-list">
-                    <li class="menu-list-icon"><a href="teams.html" class="menu-list-icon-link" data-border="#166dca"><img
-                                src="icons-proect/AegisOfChampions.webp" alt=""
+                    <li class="menu-list-icon"><a href="teams.html" class="menu-list-icon-link"
+                            data-border="#166dca"><img src="icons-proect/AegisOfChampions.webp" alt=""
                                 class="menu-list-icon-image">TI 2025</a>
                     </li>
                     <li class="menu-list-icon"><a href="main.html" data-border="#3e0b77">Home</a></li>
@@ -72,7 +72,10 @@
             <button class="modal-container-close-btn" data-close-modal-btn>❌</button>
             <div class="playerModal" data-player-info-container></div>
         </div>
-        <div class="modal-match-details" data-match-details></div>
+        <div class="match-modal-container" data-match-modal-container hidden>
+            <button class="match-modal-container-close-btn" data-match-details-close-btn>❌</button>
+            <div class="modal-match-details" data-match-details></div>
+        </div>
     </div>
     <script src="./js/main.js" type="module" defer></script>
     <script src="js/leagues.js"></script>
